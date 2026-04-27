@@ -1,5 +1,5 @@
-from cobaya.likelihoods.des_y3._cosmolike_prototype_base import _cosmolike_prototype_base, survey
-import cosmolike_des_y3_interface as ci
+from cobaya.likelihoods.desy3_real._cosmolike_prototype_base import _cosmolike_prototype_base, survey
+import cosmolike_desy3_real_interface as ci
 import numpy as np
 
 class combo_xi_ggl(_cosmolike_prototype_base):

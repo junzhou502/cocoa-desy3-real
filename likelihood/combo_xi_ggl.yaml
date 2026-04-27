@@ -17,6 +17,15 @@ IA_model: 0
 external_nz_modeling: 0
 use_emulator: False 
 
+# options for comparisons
+implement_bin_average: 1
+adopt_nolimber_gg: 1
+lmax_nolimber: 150
+adopt_RSD_gg: 1
+adopt_RSD_gs: 1
+NCell_interpolation: 300 #base:300
+Na_interpolation: 225 #base:225
+
 # BIAS REDSHIFT EVOLUTION [b1,b2,bs2,b3,bmag] (see bias.c)
 bias_model: [0,0,0,1,0]
 

@@ -39,7 +39,7 @@ namespace py = pybind11;
 #include "cosmolike/generic_interface.hpp"
 #include "cosmolike/cosmo2D_wrapper.hpp"
 
-PYBIND11_MODULE(cosmolike_des_y3_interface, m)
+PYBIND11_MODULE(cosmolike_desy3_real_interface, m)
 {
   m.doc() = "CosmoLike Interface for DES-Y3 3x2 Module";
 
@@ -114,7 +114,14 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
 
   m.def("initial_setup",
       &cosmolike_interface::initial_setup,
-      "Initialize Cosmolike Variables to their Default Values"
+      "Initialize Cosmolike Variables to their Default Values",
+      py::arg("implement_bin_average").none(false).noconvert(),
+      py::arg("adopt_nolimber_gg").none(false).noconvert(),
+      py::arg("lmax_nolimber").none(false).noconvert(),
+      py::arg("adopt_RSD_gg").none(false).noconvert(),
+      py::arg("adopt_RSD_gs").none(false).noconvert(),
+      py::arg("NCell_interpolation").none(false).noconvert(),
+      py::arg("Na_interpolation").none(false).noconvert()
     );
 
   m.def("init_redshift_distributions_from_files",

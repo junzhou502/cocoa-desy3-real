@@ -16,7 +16,7 @@ from scipy.interpolate import CubicSpline as _CubicSpline
 import euclidemu2 as ee2
 import math
 
-import cosmolike_des_y3_interface as ci
+import cosmolike_desy3_real_interface as ci
 
 survey = "DES"
 
@@ -51,7 +51,24 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     self.len_log10k_interp_2D = len(self.log10k_interp_2D)
     # ------------------------------------------------------------------------
 
-    ci.initial_setup()
+    ci.initial_setup(
+      self.implement_bin_average,
+      self.adopt_nolimber_gg,
+      self.lmax_nolimber,
+      self.adopt_RSD_gg,
+      self.adopt_RSD_gs,
+      self.NCell_interpolation,
+      self.Na_interpolation,
+    )
+    
+    self.log.info(' implement_bin_average = %d ', self.implement_bin_average)
+    self.log.info(' adopt_nolimber_gg = %d ', self.adopt_nolimber_gg)
+    self.log.info(' lmax_nolimber = %d ', self.lmax_nolimber)
+    self.log.info(' adopt_RSD_gg = %d ', self.adopt_RSD_gg)
+    self.log.info(' adopt_RSD_gs = %d ', self.adopt_RSD_gs)
+    self.log.info(' NCell_interpolation = %d ', self.NCell_interpolation)
+    self.log.info(' Na_interpolation = %d ', self.Na_interpolation)
+    
     ci.init_probes(possible_probes=self.probe)
     ci.init_binning(self.ntheta, self.theta_min_arcmin, self.theta_max_arcmin)
 
