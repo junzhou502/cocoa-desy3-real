@@ -3,6 +3,7 @@ from __future__ import absolute_import, division, print_function
 import os
 import numpy as np
 import scipy
+from scipy.interpolate import interp1d
 import sys
 import time
 
@@ -11,8 +12,6 @@ from cobaya.likelihoods.base_classes import DataSetLikelihood
 from cobaya.log import LoggedError
 from getdist import IniFile
 
-from scipy.interpolate import interp1d
-from scipy.interpolate import CubicSpline as _CubicSpline
 import euclidemu2 as ee2
 import math
 
@@ -35,7 +34,7 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     self.ntheta = ini.int("n_theta")
     self.theta_min_arcmin = ini.float("theta_min_arcmin")
     self.theta_max_arcmin = ini.float("theta_max_arcmin")
-
+    
     # ------------------------------------------------------------------------   
     tmp=int(1000 + 250*self.accuracyboost)
     self.z_interp_1D = np.concatenate((np.linspace(0.0,3.0,max(100,int(0.80*tmp))),
@@ -45,21 +44,41 @@ class _cosmolike_prototype_base(DataSetLikelihood):
 
     tmp=int(min(120 + 20*self.accuracyboost,250))
     self.z_interp_2D = np.concatenate((np.linspace(0,3.0,max(50,int(0.75*tmp))), 
-                                       np.linspace(3.01,50.0,max(30,int(0.25*tmp)))),axis=0)
+                                       np.linspace(3.01,50.1,max(30,int(0.25*tmp)))),axis=0)
     self.len_z_interp_2D = len(self.z_interp_2D)
+    
     self.log10k_interp_2D = np.linspace(-4.99,2.0,int(1250+250*self.accuracyboost))
     self.len_log10k_interp_2D = len(self.log10k_interp_2D)
     # ------------------------------------------------------------------------
-
-    ci.initial_setup()
+    
+    ci.initial_setup(
+      self.implement_bin_average,
+      self.adopt_nolimber_gg,
+      self.lmax_nolimber,
+      self.adopt_RSD_gg,
+      self.adopt_RSD_gs,
+      self.NCell_interpolation,
+      self.Na_interpolation,)
+    
+    self.log.info(' implement_bin_average = %d ', self.implement_bin_average)
+    self.log.info(' adopt_nolimber_gg = %d ', self.adopt_nolimber_gg)
+    self.log.info(' lmax_nolimber = %d ', self.lmax_nolimber)
+    self.log.info(' adopt_RSD_gg = %d ', self.adopt_RSD_gg)
+    self.log.info(' adopt_RSD_gs = %d ', self.adopt_RSD_gs)
+    self.log.info(' NCell_interpolation = %d ', self.NCell_interpolation)
+    self.log.info(' Na_interpolation = %d ', self.Na_interpolation)
+    
     ci.init_probes(possible_probes=self.probe)
-    ci.init_binning(self.ntheta, self.theta_min_arcmin, self.theta_max_arcmin)
+
+    ci.init_binning(int(self.ntheta), self.theta_min_arcmin, self.theta_max_arcmin)
+
+    ci.init_ggl_exclude(np.array(self.ggl_exclude).flatten())
 
     if self.debug:
       ci.set_log_level_debug()
     else:
       ci.set_log_level_info()
-      
+
     if self.use_emulator:
       ci.init_redshift_distributions_from_files(
           lens_multihisto_file=self.lens_file,
@@ -67,37 +86,43 @@ class _cosmolike_prototype_base(DataSetLikelihood):
           source_multihisto_file=self.source_file,
           source_ntomo=int(self.source_ntomo))
       ci.init_data_real(self.cov_file, self.mask_file, self.data_vector_file)  
+      
       ci.init_accuracy_boost(accuracy_boost=0.35, 
                              integration_accuracy=-1) # seems enough to compute PM
     else:
       ci.init_ntable_lmax(lmax=int(self.lmax))
+
       ci.init_accuracy_boost(accuracy_boost=self.accuracyboost, 
                              integration_accuracy=int(self.integration_accuracy))
+
       ci.init_cosmo_runmode(is_linear=False)
 
       if self.external_nz_modeling: 
-        (self.lens_nz, self.source_nz) = ci.read_redshift_distributions(
-            lens_multihisto_file=self.lens_file,
-            lens_ntomo=int(self.lens_ntomo), 
-            source_multihisto_file=self.source_file,
-            source_ntomo=int(self.source_ntomo)) 
+        (  self.lens_nz, self.source_nz) = ci.read_redshift_distributions(
+            lens_multihisto_file = self.lens_file,
+            lens_ntomo = int(self.lens_ntomo), 
+            source_multihisto_file = self.source_file,
+            source_ntomo = int(self.source_ntomo)
+          ) 
         ci.init_lens_sample_size(int(self.lens_ntomo))
         ci.init_source_sample_size(int(self.source_ntomo))
         ci.init_ntomo_powerspectra() # must be called after set_source/lens_size  
       else:
         ci.init_redshift_distributions_from_files(
-          lens_multihisto_file=self.lens_file,
-          lens_ntomo=int(self.lens_ntomo), 
-          source_multihisto_file=self.source_file,
-          source_ntomo=int(self.source_ntomo))  
-
+          lens_multihisto_file = self.lens_file,
+          lens_ntomo = int(self.lens_ntomo), 
+          source_multihisto_file = self.source_file,
+          source_ntomo = int(self.source_ntomo)) 
+      
       ci.init_data_real(self.cov_file, self.mask_file, self.data_vector_file)
+
       ci.init_IA(ia_model = int(self.IA_model), 
                  ia_redshift_evolution = int(self.IA_redshift_evolution))
-      if self.probe not in ("xi", "3x2pt_ss_sk_sk", "2x2pt_ss_sk"):
+     
+      if self.probe != "xi":
         # (b1, b2, bs2, b3, bmag). 0 = one amplitude per bin
         ci.init_bias(bias_model=self.bias_model)
-
+      
       if self.non_linear_emul == 1:
         self.emulator = ee2.PyEuclidEmulator()
 
@@ -108,17 +133,17 @@ class _cosmolike_prototype_base(DataSetLikelihood):
         if self.add_baryons_on_dv:
           sim = self.which_bsims_add_on_dv
           self.allsims = ini.relativeFileName('all_sims_hdf5_file')
-          ci.init_baryons_contamination(sim = sim, allsims=allsims)
+          ci.init_baryons_contamination(sim = sim, allsims=self.allsims)
 
     if self.use_baryon_pca:
       baryon_pca_file = ini.relativeFileName('baryon_pca_file')
-      self.npcs = 4
+      self.npcs = 1
       ci.set_baryon_pcs(eigenvectors = np.loadtxt(baryon_pca_file))
       self.log.info('use_baryon_pca = True')
       self.log.info('baryon_pca_file = %s loaded', baryon_pca_file)
     else:
       self.log.info('use_baryon_pca = False')
-
+  
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -163,27 +188,26 @@ class _cosmolike_prototype_base(DataSetLikelihood):
           } # in Mpc
         }     
     else:
-      res = {}
-      if self.non_linear_emul == 1:
-        res.update({"wa": None, "w": None, "mnu": None, "omegab": None})
-      res.update({
-          "As": None,
-          "H0": None,
-          "omegam": None,
-          "Pk_interpolator": {
-            "z": self.z_interp_2D,
-            "k_max": self.kmax_boltzmann * self.accuracyboost,
-            "nonlinear": (True,False),
-            "vars_pairs": ([("delta_tot", "delta_tot")])
-          },
-          "comoving_radial_distance": {
-            "z": self.z_interp_1D
-          }, # in Mpc
-          "Cl": { # DONT REMOVE THIS - SOME WEIRD BEHAVIOR IN CAMB WITHOUT WANTS_CL
-            'tt': 0
-          }
-        })
-      return res
+      return {
+        "As": None,
+        "H0": None,
+        "omegam": None,
+        "omegab": None,
+        "mnu": None,
+        "w": None,
+        "Pk_interpolator": {
+          "z": self.z_interp_2D,
+          "k_max": self.kmax_boltzmann * self.accuracyboost,
+          "nonlinear": (True,False),
+          "vars_pairs": ([("delta_tot", "delta_tot")])
+        },
+        "comoving_radial_distance": {
+          "z": self.z_interp_1D 
+        }, # in Mpc
+        "Cl": { # DONT REMOVE THIS - SOME WEIRD BEHAVIOR IN CAMB WITHOUT WANTS_CL
+          'tt': 0
+        }
+      }
 
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -209,29 +233,27 @@ class _cosmolike_prototype_base(DataSetLikelihood):
           'w'    : self.provider.get_param("w"),
           'wa'   : self.provider.get_param("wa"),
         }
-        # Euclid Emulator only works on z<10.0
         kbt, tmp_bt = ee2.get_boost2(params, 
                                      self.z_interp_2D[self.z_interp_2D < 10.0], 
                                      self.emulator, 
                                      10**np.linspace(-2.0589,0.973,self.len_log10k_interp_2D))
         bt = np.array(tmp_bt, dtype='float64')
         tmp = interp1d(np.log10(kbt), 
-                       np.log(bt), 
-                       axis=1,
-                       kind='linear', 
-                       fill_value='extrapolate', 
-                       assume_sorted=True)(self.log10k_interp_2D-np.log10(h)) #h/Mpc
+                        np.log(bt), 
+                        axis=1,
+                        kind='linear', 
+                        fill_value='extrapolate', 
+                        assume_sorted=True)(self.log10k_interp_2D-np.log10(h)) #h/Mpc
         tmp[:,10**(self.log10k_interp_2D-np.log10(h)) < 8.73e-3] = 0.0
         lnbt = np.zeros((self.len_z_interp_2D, self.len_log10k_interp_2D))
         lnbt[self.z_interp_2D < 10.0, :] = tmp
         # Use Halofit first that works on all redshifts
         lnPNL = self.provider.get_Pk_interpolator(("delta_tot", "delta_tot"),
-          nonlinear=True,extrap_kmax=2.5e2*self.accuracyboost).logP(self.z_interp_2D,
+          nonlinear=True, extrap_kmax =2.5e2*self.accuracyboost).logP(self.z_interp_2D,
           np.power(10.0,self.log10k_interp_2D)).flatten(order='F')+np.log(h**3) 
         # on z < 10.0, replace it with EE2
-        lnPNL = np.where(
-          (self.z_interp_2D<10)[:,None], 
-          lnPL.reshape(self.len_z_interp_2D,self.len_log10k_interp_2D,order='F') + lnbt, 
+        lnPNL = np.where((self.z_interp_2D<10)[:,None], 
+          lnPL.reshape(self.len_z_interp_2D,self.len_log10k_interp_2D,order='F')+lnbt, 
           lnPNL.reshape(self.len_z_interp_2D,self.len_log10k_interp_2D,order='F')).ravel(order='F')
       elif self.non_linear_emul == 2:
         lnPNL = self.provider.get_Pk_interpolator(("delta_tot", "delta_tot"),
@@ -348,10 +370,9 @@ class _cosmolike_prototype_base(DataSetLikelihood):
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
-
-  def logp(self, **params_values):
-    datavector = self.internal_get_datavector(**params_values)
-    return self.compute_logp(datavector)
+  
+  def logp(self, **params):
+    return self.compute_logp(self.get_datavector(**params))
 
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -475,7 +496,7 @@ class _cosmolike_prototype_base(DataSetLikelihood):
       fmt = '%d', '%1.8e'
       np.savetxt(self.print_datavector_file, out, fmt = fmt)
     return dv
-    
+
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------

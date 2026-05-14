@@ -99,6 +99,12 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       py::arg("DATA").none(false)
     );
 
+  m.def("init_ggl_exclude",
+      &cosmolike_interface::init_ggl_exclude,
+      "Set lens-source tomo bin pairs excluded in galaxy-galaxy lensing",
+      py::arg("ggl_exclude").none(false)
+    );
+
   m.def("init_IA",
       &cosmolike_interface::init_IA,
       "Init IA related options",
@@ -114,7 +120,14 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
 
   m.def("initial_setup",
       &cosmolike_interface::initial_setup,
-      "Initialize Cosmolike Variables to their Default Values"
+      "Initialize Cosmolike Variables to their Default Values",
+      py::arg("implement_bin_average").none(false).noconvert(),
+      py::arg("adopt_nolimber_gg").none(false).noconvert(),
+      py::arg("lmax_nolimber").none(false).noconvert(),
+      py::arg("adopt_RSD_gg").none(false).noconvert(),
+      py::arg("adopt_RSD_gs").none(false).noconvert(),
+      py::arg("NCell_interpolation").none(false).noconvert(),
+      py::arg("Na_interpolation").none(false).noconvert()
     );
 
   m.def("init_redshift_distributions_from_files",

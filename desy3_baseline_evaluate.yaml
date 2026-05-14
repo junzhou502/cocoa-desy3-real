@@ -3,8 +3,8 @@ debug: False
 stop_at_error: True
 
 likelihood:
-  des_y3.cosmic_shear:
-    path: ./external_modules/data/des_y3
+  desy3_real.combo_3x2pt:
+    path: ./projects/desy3_real/data/
     data_file: des_y3_real.dataset
     accuracyboost: 1.0
     integration_accuracy: 0
@@ -14,11 +14,24 @@ likelihood:
     non_linear_emul: 2
     IA_model: 1
     IA_redshift_evolution: 3
+    ggl_exclude: []
+
     use_baryon_pca: False
     debug: false
     create_baryon_pca: false
     baryon_pca_select_sims: "antilles-2-99/antilles-101-378/antilles-380-400"
-    filename_baryon_pca: "./projects/lsst_y1/chains/pca.txt"
+    filename_baryon_pca: "./projects/desy3_real/data/pca.txt"
+    print_datavector: True
+    print_datavector_file: "./projects/desy3_real/chains/desy3_baseline_evaluate/desy3.modelvector"
+
+    implement_bin_average: 1
+    lmax_nolimber: 150
+    adopt_nolimber_gg: 1
+    adopt_RSD_gg: 1
+    adopt_RSD_gs: 1
+    NCell_interpolation: 300 #base:300
+    Na_interpolation: 225 #base:225
+
 params:
   As_1e9:
     prior:
@@ -108,7 +121,7 @@ params:
     value: 0.0697186
     latex: \tau_\mathrm{reio}
   # ----------------------------------------------------------------------------
-  # DES-Y3 CS nuisance parameter start
+  # DES-Y3 3x2pt nuisance parameters begins
   # ----------------------------------------------------------------------------
   # ----------------------------------------------------------------------------
   # DES-Y3 SOURCE VALUES FROM TABLE I, PAGE 11 of 2105.13549
@@ -250,14 +263,109 @@ params:
       loc: 1
       scale: 0.15
     proposal: 0.1
+ # ----------------------------------------------------------------------------
+ # DES-Y3 LENS VALUES FROM TABLE IV, PAGE 34 of 2105.13549
+ # ----------------------------------------------------------------------------
+ # Lensing photo-z errors
+  DES_DZ_L1:
+    prior:
+      dist: norm
+      loc: 0.006
+      scale: 0.004
+    ref:
+      dist: norm
+      loc: 0.006
+      scale: 0.004
+    proposal: 0.002
+    latex: \Delta z_\mathrm{l,DES}^1
+  DES_DZ_L2:
+    prior:
+      dist: norm
+      loc: 0.001
+      scale: 0.003
+    ref:
+      dist: norm
+      loc: 0.0001
+      scale: 0.003
+    proposal: 0.001
+    latex: \Delta z_\mathrm{l,DES}^2
+  DES_DZ_L3:
+    prior:
+      dist: norm
+      loc: 0.004
+      scale: 0.003
+    ref:
+      dist: norm
+      loc: 0.0004
+      scale: 0.003
+    proposal: 0.001
+    latex: \Delta z_\mathrm{l,DES}^3
+  DES_DZ_L4:
+    prior:
+      dist: norm
+      loc: -0.002
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: -0.002
+      scale: 0.005
+    proposal: 0.002
+    latex: \Delta z_\mathrm{l,DES}^4
+  DES_DZ_L5:
+    prior:
+      dist: norm
+      loc: -0.007
+      scale: 0.01
+    ref:
+      dist: norm
+      loc: -0.007
+      scale: 0.01
+    proposal: 0.005
+    latex: \Delta z_\mathrm{l,DES}^5
   # ----------------------------------------------------------------------------
-  # DES-Y3 CS nuisance parameters End
+  # DES-Y3 LENS VALUES FROM TABLE IV, PAGE 34 of 2105.13549
+  # Table IV adopts Cosmolike convention BMAG_COSMOLIKE = 2 BMAG_COSMOSIS - 1
+  # ----------------------------------------------------------------------------
+  DES_BMAG_1:
+    value: 0.63
+    latex: b_\mathrm{BMAG-DES}^1
+  DES_BMAG_2:
+    value: -3.04
+    latex: b_\mathrm{BMAG-DES}^2
+  DES_BMAG_3:
+    value: -1.33
+    latex: b_\mathrm{BMAG-DES}^3
+  DES_BMAG_4:
+    value: 2.50
+    latex: b_\mathrm{BMAG-DES}^4
+  DES_BMAG_5:
+    value: 1.93
+    latex: b_\mathrm{BMAG-DES}^5
+  # ----------------------------------------------------------------------------
+  # POINT MASS MARGINALIZATION (not following DES paper here)
+  # ----------------------------------------------------------------------------
+  DES_PM1:
+    value: 0.0
+    latex: PM_\mathrm{DES}^1
+  DES_PM2:
+    value: 0.0
+    latex: PM_\mathrm{DES}^2
+  DES_PM3:
+    value: 0.0
+    latex: PM_\mathrm{DES}^3
+  DES_PM4:
+    value: 0.0
+    latex: PM_\mathrm{DES}^4
+  DES_PM5:
+    value: 0.0
+    latex: PM_\mathrm{DES}^5
+  # ----------------------------------------------------------------------------
+  # DES-Y3 3x2pt nuisance parameters End
   # ----------------------------------------------------------------------------
   # ----------------------------------------------------------------------------
   # -------------------------- DERIVED PARAMETERS ------------------------------
   # ----------------------------------------------------------------------------
   # WARNING: DO NOT REMOVE omegabh2/omegach2/omegamh2/wa FROM DERIVED PARAMETERS
-  # WARNING: DO NOT REMOVE THE DROP FLAG FROM omegab/omegam/As_1e9/w0pwa
   # SEE: github.com/CosmoLike/cocoa#warning-warning-warning-weak-lensing-yaml-files-in-cobaya-
   # --------------------------------------------------------------------------------------- 
   As:
@@ -337,7 +445,17 @@ sampler:
       DES_A2_1: 0.01
       DES_A2_2: -1.5448080290038528
       DES_BTA_1: 0.8154011496506723
+      DES_DZ_L1: 0.00457604
+      DES_DZ_L2: 0.000309875
+      DES_DZ_L3: 0.00855907
+      DES_DZ_L4: -0.00316269
+      DES_DZ_L5: -0.0146753
+      DES_B1_1: 1.72716
+      DES_B1_2: 1.65168
+      DES_B1_3: 1.61423
+      DES_B1_4: 1.92886
+      DES_B1_5: 2.11633
       w0pwa: -0.9
       w: -0.9
 
-output: ./projects/des_y3/chains/EXAMPLE_EVALUATE1
+output: ./projects/desy3_real/chains/desy3_baseline_evaluate/

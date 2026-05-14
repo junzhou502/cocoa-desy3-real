@@ -1,4 +1,4 @@
-from cobaya.likelihoods.des_y3._cosmolike_prototype_base import _cosmolike_prototype_base, survey
+from cobaya.likelihoods.desy3_real._cosmolike_prototype_base import _cosmolike_prototype_base, survey
 import cosmolike_des_y3_interface as ci
 import numpy as np
 

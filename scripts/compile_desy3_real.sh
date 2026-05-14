@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
-if [ -z "${IGNORE_COSMOLIKE_LSSTY1_CODE}" ]; then
+if [ -z "${IGNORE_COSMOLIKE_DESY3_CODE}" ]; then
 
   if [ -z "${ROOTDIR}" ]; then
     source start_cocoa.sh || { pfail 'ROOTDIR'; return 1; }
@@ -57,7 +57,7 @@ if [ -z "${IGNORE_COSMOLIKE_LSSTY1_CODE}" ]; then
 
   PROJECT="${ROOTDIR:?}/projects"
 
-  FOLDER="${DES_Y3_NAME:-"des_y3"}"
+  FOLDER="${DES_Y3_NAME:-"desy3_real"}"
 
   PACKDIR="${PROJECT:?}/${FOLDER:?}"
 
