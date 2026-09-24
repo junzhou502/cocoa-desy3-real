@@ -493,7 +493,9 @@ class _cosmolike_prototype_base(DataSetLikelihood):
       out = np.zeros(shape=(size, 2))
       out[:,0] = np.arange(0, size)
       out[:,1] = dv
-      fmt = '%d', '%1.8e'
+      # Preserve a float64 round trip. DES covariance inversion amplifies the
+      # rounding error from the historical eight-digit output format.
+      fmt = '%d', '%1.17e'
       np.savetxt(self.print_datavector_file, out, fmt = fmt)
     return dv
     
@@ -522,6 +524,6 @@ class _cosmolike_prototype_base(DataSetLikelihood):
       out = np.zeros(shape=(size, 2))
       out[:,0] = np.arange(0, size)
       out[:,1] = datavector
-      fmt = '%d', '%1.8e'
+      fmt = '%d', '%1.17e'
       np.savetxt(self.print_datavector_file, out, fmt = fmt)
     return datavector
