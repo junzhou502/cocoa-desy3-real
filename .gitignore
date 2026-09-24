@@ -13,3 +13,8 @@ interface/.DS_Store
 likelihood/.DS_Store
 scripts/.DS_Store
 data/.DS_Store
+
+# ~32 MB regenerable input: DES Y3 MagLim covariance in "i j value" form
+# (from the public release FITS). Not tracked, to keep the repository small.
+# Rebuild with scripts/build_maglim_inputs.py --release <fits> --products cov
+data/maglim_cov.txt

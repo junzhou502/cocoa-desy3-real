@@ -1,0 +1,12 @@
+data_file = maglim_cosmosis_dv.txt
+cov_file = maglim_cov.txt
+mask_file = maglim_all.mask
+nz_lens_file = maglim_lens.nz
+nz_source_file = maglim_source.nz
+lens_ntomo = 6
+source_ntomo = 4
+n_theta = 20
+theta_min_arcmin = 2.5
+theta_max_arcmin = 250.
+baryon_pca_file = pca.txt
+all_sims_hdf5_file = baryons_logPkR.h5

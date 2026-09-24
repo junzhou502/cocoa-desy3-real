@@ -57,6 +57,14 @@
       scale: 0.01
     proposal: 0.005
     latex: \Delta z_\mathrm{l,DES}^5
+  # Bin 6 exists only for the MagLim lens sample (lens_ntomo = 6). It is
+  # declared FIXED so that every existing 5-bin (redMaGiC) config keeps
+  # exactly the same set of sampled parameters. A 6-bin analysis must
+  # override it explicitly in its own YAML.
+  # MagLim prior (des-y3-maglim-priors.ini): gaussian 0.002 0.008
+  DES_DZ_L6:
+    value: 0.0
+    latex: \Delta z_\mathrm{l,DES}^6
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -111,6 +119,14 @@
       scale: 0.1
     proposal: 0.1
     latex: b_\mathrm{1-DES}^5
+  # Bin 6 exists only for the MagLim lens sample (lens_ntomo = 6). It is
+  # declared FIXED so that every existing 5-bin (redMaGiC) config keeps
+  # exactly the same set of sampled parameters. A 6-bin analysis must
+  # override it explicitly in its own YAML.
+  # MagLim prior (des-y3-maglim-priors.ini): flat 0.8 3.0, MagLim fiducial fixes b6 = 2.3
+  DES_B1_6:
+    value: 2.3
+    latex: b_\mathrm{1-DES}^6
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -129,6 +145,9 @@
   DES_B2_5:
     value: 0.0
     latex: b_\mathrm{2-DES}^5
+  DES_B2_6:
+    value: 0.0
+    latex: b_\mathrm{2-DES}^6
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -147,6 +166,9 @@
   DES_BMAG_5:
     value: 1.93
     latex: b_\mathrm{BMAG-DES}^5
+  DES_BMAG_6:
+    value: 0.0
+    latex: b_\mathrm{BMAG-DES}^6
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -201,6 +223,14 @@
       scale: 0.5
     proposal: 0.5
     latex: PM_\mathrm{DES}^5
+  # Bin 6 exists only for the MagLim lens sample (lens_ntomo = 6). It is
+  # declared FIXED so that every existing 5-bin (redMaGiC) config keeps
+  # exactly the same set of sampled parameters. A 6-bin analysis must
+  # override it explicitly in its own YAML.
+  # MagLim prior (des-y3-maglim-priors.ini): flat -5 5 when the 6th bin is used
+  DES_PM6:
+    value: 0.0
+    latex: PM_\mathrm{DES}^6
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -229,3 +259,7 @@
   DES_STRETCH_L5:
     value: 1.0
     latex: \Sigma z_\mathrm{l,DES}^5
+  DES_STRETCH_L6:
+    value: 1.0
+    latex: \Sigma z_\mathrm{l,DES}^6
+
