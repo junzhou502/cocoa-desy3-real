@@ -121,6 +121,20 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     else:
       self.log.info('use_baryon_pca = False')
 
+    # logp passes the raw Python list from compute_data_vector_masked to
+    # ci.compute_chi2. carma's arma::Col caster converts the list into a
+    # temporary NumPy array, borrows its memory without owning it, and the
+    # temporary is freed before IP::get_chi2 reads it, so the first four
+    # theory elements are read as allocator bookkeeping (~0). The error is
+    # deterministic, not random. Cache the initialized likelihood arrays and
+    # evaluate the same quadratic form as IP::get_chi2 in NumPy instead.
+    self._active_data_mask = np.asarray(ci.get_mask(), dtype=bool)
+    self._active_data_vector = np.asarray(
+      ci.get_dv_masked(), dtype=np.float64)[self._active_data_mask]
+    inverse_covariance = np.asarray(ci.get_inv_cov_masked(), dtype=np.float64)
+    self._active_inverse_covariance = inverse_covariance[
+      np.ix_(self._active_data_mask, self._active_data_mask)]
+
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -348,7 +362,9 @@ class _cosmolike_prototype_base(DataSetLikelihood):
   # ------------------------------------------------------------------------
 
   def compute_logp(self, datavector):
-    return -0.5 * ci.compute_chi2(datavector)
+    theory = np.asarray(datavector, dtype=np.float64)[self._active_data_mask]
+    residual = theory - self._active_data_vector
+    return -0.5 * residual @ self._active_inverse_covariance @ residual
 
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
