@@ -18,6 +18,12 @@ external_nz_modeling: 0
 # gamma_t POINT-MASS KERNEL: 0 = default CosmoLike/y3_production,
 #                            1 = CosmoSIS add_gammat_point_mass match
 point_mass_model: 0
+# WAVENUMBER (h/Mpc) of the growth factor used by the IA terms only:
+#   null (default) = no IA-specific growth; IA uses the shared 5e-4 1/Mpc growth
+#   <float>        = fixed k in h/Mpc (0.030350713668324276 = CosmoSIS TATT at h = 0.69)
+#   "cosmosis"     = CosmoSIS TATT rule (first matter_power_lin k_h grid point
+#                    above 0.03 h/Mpc) at the live h; see _cosmolike_prototype_base.py
+ia_growth_k_hmpc: null
 use_emulator: False 
 
 # BIAS REDSHIFT EVOLUTION [b1,b2,bs2,b3,bmag] (see bias.c)

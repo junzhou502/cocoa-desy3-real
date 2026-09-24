@@ -223,6 +223,23 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
        py::return_value_policy::move
     );
 
+  m.def("set_growth_ia",
+      [](arma::Col<double> z,
+         arma::Col<double> G)
+      {
+        spdlog::debug("\x1b[90m{}\x1b[0m: Begins", "set_growth_ia");
+        using namespace cosmolike_interface;
+        set_growth_ia(z, G);
+        spdlog::debug("\x1b[90m{}\x1b[0m: Ends", "set_growth_ia");
+      },
+      "Set the growth table (D = G * a) used ONLY by the intrinsic-alignment "
+      "terms. Optional: until it is called they use the G of set_cosmology. "
+      "Call it after set_cosmology on every cosmology change.",
+       py::arg("z").none(false),
+       py::arg("G").none(false),
+       py::return_value_policy::move
+    );
+
   m.def("set_baryon_pcs",
       [](arma::Mat<double> eigenvectors) {
         spdlog::debug("\x1b[90m{}\x1b[0m: Begins", "set_baryon_pcs");

@@ -20,6 +20,49 @@ import cosmolike_des_y3_interface as ci
 
 survey = "DES"
 
+# ---------------------------------------------------------------------------
+# Wavenumber of the growth factor used by the INTRINSIC-ALIGNMENT terms
+# (likelihood option ia_growth_k_hmpc; ported from legacy des_y3 019f3bc and
+# 7156eba, now scoped to IA only through ci.set_growth_ia).
+#
+# By default CosmoLike takes the growth for everything (IA, non-Limber w(theta)
+# D and f, Limber RSD f) from one table measured at k = 5e-4 1/Mpc (G_growth in
+# set_cosmo_related, unchanged). CosmoSIS uses two different rules:
+#   * TATT IA (intrinsic_alignments/tatt/tatt_interface.py:286-287):
+#       ind = np.where(k_lin > 0.03)[0][0]; Dz = sqrt(p_lin[:, ind]/p_lin[0, ind])
+#     on the matter_power_lin k_h grid, i.e. the FIRST GRID POINT ABOVE
+#     0.03 h/Mpc (not 0.3 h/Mpc);
+#   * exact w(theta) (structure/projection/project_2d.py:112,142): the grid point
+#     nearest 1e-3 h/Mpc.
+# Only the first is replicated here, and only for the IA terms.
+#
+# The CosmoSIS k_h grid (boltzmann/camb/camb_interface.py:644-649) is
+#     k = np.logspace(np.log10(kcalc[0]), np.log10(max(kmax, kmax_extrapolate)), nk)
+# with kcalc[0] = CAMB's lowest transfer k/h = float32(5e-5 / h) (CAMB amin =
+# 5e-5 1/Mpc, stored in single precision), nk = 700 and kmax_extrapolate = 500
+# from the [camb] section of cosmosis/des_y3/des-y3.ini. CAVEAT: "cosmosis" mode
+# hard-codes that construction and silently breaks if nk, kmax_extrapolate or the
+# CAMB version change. Checked 2026-09-24 against the CosmoSIS 3.25.2 / CAMB
+# 1.6.5 block dump at h = 0.69: grid identical, ind = 268,
+# k = 0.030350713668324276 h/Mpc.
+# ---------------------------------------------------------------------------
+CS_CAMB_TRANSFER_KMIN_INVMPC = 5e-5    # CAMB amin
+CS_CAMB_NK = 700                       # [camb] nk in des-y3.ini
+CS_CAMB_KMAX_POWER_HMPC = 500.0        # max(kmax, kmax_extrapolate) in des-y3.ini
+CS_TATT_K_THRESHOLD_HMPC = 0.03        # tatt_interface.py:286, `k_lin > 0.03`
+
+def cosmosis_ia_growth_k_hmpc(h):
+  """k (h/Mpc) and grid index of CosmoSIS's k_lin[np.where(k_lin > 0.03)[0][0]]."""
+  kcalc0_hmpc = float(np.float32(CS_CAMB_TRANSFER_KMIN_INVMPC / h))
+  k_hmpc = np.logspace(np.log10(kcalc0_hmpc), np.log10(CS_CAMB_KMAX_POWER_HMPC),
+                       CS_CAMB_NK)
+  above = np.where(k_hmpc > CS_TATT_K_THRESHOLD_HMPC)[0]
+  if above.size == 0:
+    raise ValueError("CosmoSIS IA growth grid has no point above %g h/Mpc (h = %g)"
+                     % (CS_TATT_K_THRESHOLD_HMPC, h))
+  ind = int(above[0])
+  return k_hmpc[ind], ind
+
 class _cosmolike_prototype_base(DataSetLikelihood):
 
   def initialize(self, probe):
@@ -65,6 +108,29 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     self.point_mass_model = int(getattr(self, "point_mass_model", 0))
     ci.init_point_mass_model(point_mass_model=self.point_mass_model)
     self.log.info('point_mass_model = %d', self.point_mass_model)
+
+    # Growth wavenumber of the intrinsic-alignment terms (see the block at the
+    # top of this file). In h/Mpc, converted to 1/Mpc with the live h.
+    #   null / unset / <= 0 : default. No IA-specific growth is set, so the IA
+    #                         terms use the shared table at 5e-4 1/Mpc (bitwise
+    #                         the historical behaviour).
+    #   <float> > 0         : fixed k in h/Mpc for the IA growth only
+    #                         (0.030350713668324276 = CosmoSIS TATT at h = 0.69).
+    #   "cosmosis"          : CosmoSIS's rule at the live h.
+    _gk = getattr(self, "ia_growth_k_hmpc", None)
+    if _gk is None or (isinstance(_gk, str) and _gk.strip().lower()
+                       in ("", "none", "null", "legacy")):
+      self.ia_growth_k_mode, self.ia_growth_k_hmpc = "legacy", None
+    elif isinstance(_gk, str) and _gk.strip().lower() == "cosmosis":
+      self.ia_growth_k_mode, self.ia_growth_k_hmpc = "cosmosis", None
+    elif float(_gk) <= 0.0:
+      self.ia_growth_k_mode, self.ia_growth_k_hmpc = "legacy", None
+    else:
+      self.ia_growth_k_mode, self.ia_growth_k_hmpc = "fixed", float(_gk)
+    self._ia_growth_k_logged = False
+    self.log.info('ia_growth_k_hmpc mode = %s%s', self.ia_growth_k_mode,
+                  "" if self.ia_growth_k_hmpc is None
+                  else " (%.12g h/Mpc)" % self.ia_growth_k_hmpc)
 
     if self.debug:
       ci.set_log_level_debug()
@@ -282,6 +348,24 @@ class _cosmolike_prototype_base(DataSetLikelihood):
         z_1D=self.z_interp_1D,
         chi=self.provider.get_comoving_radial_distance(self.z_interp_1D)*h # convert to Mpc/h
       )
+
+      # Optional growth for the intrinsic-alignment terms only (default: none,
+      # the IA terms then use G_growth above). Same construction as G_growth,
+      # at the IA wavenumber.
+      if getattr(self, "ia_growth_k_mode", "legacy") != "legacy":
+        if self.ia_growth_k_mode == "cosmosis":
+          _k_hmpc, _ind = cosmosis_ia_growth_k_hmpc(h)
+        else:
+          _k_hmpc, _ind = self.ia_growth_k_hmpc, -1
+        k_ia = _k_hmpc * h                                # h/Mpc -> 1/Mpc
+        G_ia = np.sqrt(PKL.P(self.z_interp_2D,k_ia)/PKL.P(0,k_ia))*(1+self.z_interp_2D)
+        G_ia /= G_ia[-1]
+        ci.set_growth_ia(z=self.z_interp_2D, G=G_ia)
+        if not self._ia_growth_k_logged:
+          self.log.info('IA growth wavenumber: %.17g h/Mpc = %.17g 1/Mpc (h = %.10g, '
+                        'mode = %s, CosmoSIS grid index = %d); other growth uses '
+                        'stay at 5e-4 1/Mpc', _k_hmpc, k_ia, h, self.ia_growth_k_mode, _ind)
+          self._ia_growth_k_logged = True
     else:
       ci.set_distances(
         z=self.z_interp_1D,
