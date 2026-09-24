@@ -57,6 +57,15 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     ci.init_probes(possible_probes=self.probe)
     ci.init_binning(self.ntheta, self.theta_min_arcmin, self.theta_max_arcmin)
 
+    # gamma_t point-mass kernel. 0 (default) keeps the historical
+    # CosmoLike/y3_production kernel; 1 selects the CosmoSIS-matched kernel of
+    # shear/point_mass/add_gammat_point_mass.py. See PointMass::get_pm in
+    # cosmolike_core/cosmolike/generic_interface.cpp. It only matters when a
+    # DES_PM* amplitude is non-zero.
+    self.point_mass_model = int(getattr(self, "point_mass_model", 0))
+    ci.init_point_mass_model(point_mass_model=self.point_mass_model)
+    self.log.info('point_mass_model = %d', self.point_mass_model)
+
     if self.debug:
       ci.set_log_level_debug()
     else:

@@ -15,6 +15,9 @@ IA_redshift_evolution: 3
 # IA_MODEL: 0 = NLA, 1 = TATT
 IA_model: 0 
 external_nz_modeling: 0
+# gamma_t POINT-MASS KERNEL: 0 = default CosmoLike/y3_production,
+#                            1 = CosmoSIS add_gammat_point_mass match
+point_mass_model: 0
 use_emulator: False
 
 # BIAS REDSHIFT EVOLUTION [b1,b2,bs2,b3,bmag] (see bias.c)

@@ -106,6 +106,15 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       py::arg("ia_redshift_evolution").none(false).noconvert()
     );
 
+  m.def("init_point_mass_model",
+      &cosmolike_interface::init_point_mass_model,
+      "Select the gamma_t point-mass kernel: 0 = default y3_production "
+      "(lens efficiency at zmean, (1+z)^3/chi, multiplied by (1+m)); "
+      "1 = CosmoSIS-matched (integrated over the lens n(z), (1+z)/chi, "
+      "added after the (1+m) shear calibration)",
+      py::arg("point_mass_model").none(false).noconvert()
+    );
+
   m.def("init_probes",
       &cosmolike_interface::init_probes,
       "Init Probes (cosmic shear or 2x2pt or 3x2pt...)",
