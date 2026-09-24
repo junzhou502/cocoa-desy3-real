@@ -201,3 +201,31 @@
       scale: 0.5
     proposal: 0.5
     latex: PM_\mathrm{DES}^5
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # Lens photo-z stretch (width) parameters.
+  #
+  # These map onto CosmoLike nuisance.photoz[1][1][i], which pf_photoz applies
+  # as zz -> (zz - bias - zmean)/stretch + zmean for the LENS sample only.
+  # CosmoLike defaults this entry to 1.0, so fixing these at 1.0 keeps the
+  # theory prediction bit-identical to the pre-plumbing behaviour.
+  #
+  # They are FIXED at 1.0 for now, on purpose. They will be converted into
+  # sampled parameters with priors only after the fixed-stretch data-vector
+  # regression comparison has been signed off.
+  DES_STRETCH_L1:
+    value: 1.0
+    latex: \Sigma z_\mathrm{l,DES}^1
+  DES_STRETCH_L2:
+    value: 1.0
+    latex: \Sigma z_\mathrm{l,DES}^2
+  DES_STRETCH_L3:
+    value: 1.0
+    latex: \Sigma z_\mathrm{l,DES}^3
+  DES_STRETCH_L4:
+    value: 1.0
+    latex: \Sigma z_\mathrm{l,DES}^4
+  DES_STRETCH_L5:
+    value: 1.0
+    latex: \Sigma z_\mathrm{l,DES}^5

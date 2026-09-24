@@ -352,9 +352,21 @@ class _cosmolike_prototype_base(DataSetLikelihood):
         ci.set_nuisance_clustering_photoz(
           bias=[params.get(p,0) for p in [survey+"_DZ_L"+str(i+1) for i in range(ntomo)]]
         )
+        # Lens photo-z stretch (width). CosmoLike defaults photoz[1][1][i] to
+        # 1.0, so the default here MUST be 1.0 and not 0 (pf_photoz divides by
+        # this value).
+        ci.set_nuisance_clustering_photoz_stretch(
+          stretch=[params.get(p,1.0) for p in [survey+"_STRETCH_L"+str(i+1) for i in range(ntomo)]]
+        )
       else:
         ci.set_nuisance_clustering_photoz(
           bias=[params.get(p,0) for p in [survey+"_DZ_L"+str(i+1) for i in range(ntomo)]]
+        )
+        # Lens photo-z stretch (width). CosmoLike defaults photoz[1][1][i] to
+        # 1.0, so the default here MUST be 1.0 and not 0 (pf_photoz divides by
+        # this value).
+        ci.set_nuisance_clustering_photoz_stretch(
+          stretch=[params.get(p,1.0) for p in [survey+"_STRETCH_L"+str(i+1) for i in range(ntomo)]]
         )
 
   # ------------------------------------------------------------------------

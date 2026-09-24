@@ -263,6 +263,13 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       py::return_value_policy::move
     );
 
+  m.def("set_nuisance_clustering_photoz_stretch",
+      &cosmolike_interface::set_nuisance_clustering_photoz_stretch,
+      "Set nuisance clustering photo-z stretch (width) amplitudes",
+      py::arg("stretch"),
+      py::return_value_policy::move
+    );
+
   m.def("set_point_mass",
       [](arma::Col<double> PM) {
         cosmolike_interface::PointMass::get_instance().set_pm_vector(PM);
