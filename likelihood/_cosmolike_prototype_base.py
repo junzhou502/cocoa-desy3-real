@@ -47,7 +47,9 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     self.z_interp_2D = np.concatenate((np.linspace(0,3.0,max(50,int(0.75*tmp))), 
                                        np.linspace(3.01,50.0,max(30,int(0.25*tmp)))),axis=0)
     self.len_z_interp_2D = len(self.z_interp_2D)
-    self.log10k_interp_2D = np.linspace(-4.99,2.0,int(1250+250*self.accuracyboost))
+    # CAMB's transfer-grid minimum rises above 10**-4.99 in young-universe
+    # prior corners, so keep the requested grid inside the validated range.
+    self.log10k_interp_2D = np.linspace(-4.90,2.0,int(1250+250*self.accuracyboost))
     self.len_log10k_interp_2D = len(self.log10k_interp_2D)
     # ------------------------------------------------------------------------
 
@@ -192,8 +194,9 @@ class _cosmolike_prototype_base(DataSetLikelihood):
   def set_cosmo_related(self):
     h = self.provider.get_param("H0")/100.0
     if not self.use_emulator:
-      PKL  = self.provider.get_Pk_interpolator(("delta_tot", "delta_tot"), 
-                                               nonlinear=False, 
+      PKL  = self.provider.get_Pk_interpolator(("delta_tot", "delta_tot"),
+                                               nonlinear=False,
+                                               extrap_kmin=1e-6,
                                                extrap_kmax=2.5e2*self.accuracyboost)
       lnPL = PKL.logP(self.z_interp_2D,
                       np.power(10.0,self.log10k_interp_2D)).flatten(order='F')+np.log(h**3)
@@ -226,7 +229,8 @@ class _cosmolike_prototype_base(DataSetLikelihood):
         lnbt[self.z_interp_2D < 10.0, :] = tmp
         # Use Halofit first that works on all redshifts
         lnPNL = self.provider.get_Pk_interpolator(("delta_tot", "delta_tot"),
-          nonlinear=True,extrap_kmax=2.5e2*self.accuracyboost).logP(self.z_interp_2D,
+          nonlinear=True, extrap_kmin=1e-6,
+          extrap_kmax=2.5e2*self.accuracyboost).logP(self.z_interp_2D,
           np.power(10.0,self.log10k_interp_2D)).flatten(order='F')+np.log(h**3) 
         # on z < 10.0, replace it with EE2
         lnPNL = np.where(
@@ -235,7 +239,8 @@ class _cosmolike_prototype_base(DataSetLikelihood):
           lnPNL.reshape(self.len_z_interp_2D,self.len_log10k_interp_2D,order='F')).ravel(order='F')
       elif self.non_linear_emul == 2:
         lnPNL = self.provider.get_Pk_interpolator(("delta_tot", "delta_tot"),
-          nonlinear=True, extrap_kmax =2.5e2*self.accuracyboost).logP(self.z_interp_2D,
+          nonlinear=True, extrap_kmin=1e-6,
+          extrap_kmax =2.5e2*self.accuracyboost).logP(self.z_interp_2D,
           np.power(10.0,self.log10k_interp_2D)).flatten(order='F')+np.log(h**3)   
       else:
         raise LoggedError(self.log, "non_linear_emul = %d is an invalid option", non_linear_emul)
