@@ -1,0 +1,57 @@
+# Task cfastpt-cubic-upsampling-20260924, job C2: experiment 3 (attribution of the accuracyboost
+# dependence at U = 32): each accuracyboost component alone (likelihood accuracyboost 1), and the
+# accuracyboost ladder of the -O3 build without FMA contraction (rounding sensitivity per ab).
+# base runs: U32c0 / U32c5 of job 59498280 (accuracyboost 1, U = 32)
+# -- c0: core grids only (N_a = ceil(225 X), N_ell = ceil(300 X), FAST-PT nodes 270 + 200 int(X - 1));
+#    X = 1.999 has the N_a, N_ell of X = 2 but the FAST-PT nodes of X = 1
+knobs K1p999c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 1.999
+knobs K2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 2
+knobs K3c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 3
+knobs K5c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 5
+knobs K8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 8
+# -- c0: CAMB kmax only (kmax_boltzmann = 50 ab moves the Pk_interpolator k_max and CAMB kmax together)
+knobs M100c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=100
+knobs M150c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=150
+knobs M250c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=250
+knobs M400c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=400
+# -- c0: prototype grids only (z_interp_1D, z_interp_2D, log10k_interp_2D)
+knobs Gz1d2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=2
+knobs Gz2d2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z2d=2
+knobs Gk2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost k=2
+knobs Gall2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=2,z2d=2,k=2
+knobs Gz1d8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=8
+knobs Gz2d8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z2d=8
+knobs Gk8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost k=8
+knobs Gall8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=8,z2d=8,k=8
+# -- c0: accuracyboost ladder of the no-FMA -O3 build at U = 32
+knobsso NFa1U32c0 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=1
+knobsso NFa2U32c0 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=2
+knobsso NFa3U32c0 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=3
+knobsso NFa5U32c0 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=5
+knobsso NFa8U32c0 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=8
+# -- c5: core grids only (N_a = ceil(225 X), N_ell = ceil(300 X), FAST-PT nodes 270 + 200 int(X - 1));
+#    X = 1.999 has the N_a, N_ell of X = 2 but the FAST-PT nodes of X = 1
+knobs K1p999c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 1.999 --param-set omegam=0.8 As_1e9=4.5
+knobs K2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 2 --param-set omegam=0.8 As_1e9=4.5
+knobs K3c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 3 --param-set omegam=0.8 As_1e9=4.5
+knobs K5c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 5 --param-set omegam=0.8 As_1e9=4.5
+knobs K8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --core-boost 8 --param-set omegam=0.8 As_1e9=4.5
+# -- c5: CAMB kmax only (kmax_boltzmann = 50 ab moves the Pk_interpolator k_max and CAMB kmax together)
+knobs M100c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=100 --param-set omegam=0.8 As_1e9=4.5
+knobs M150c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=150 --param-set omegam=0.8 As_1e9=4.5
+knobs M250c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=250 --param-set omegam=0.8 As_1e9=4.5
+knobs M400c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 kmax_boltzmann=400 --param-set omegam=0.8 As_1e9=4.5
+# -- c5: prototype grids only (z_interp_1D, z_interp_2D, log10k_interp_2D)
+knobs Gz1d2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=2 --param-set omegam=0.8 As_1e9=4.5
+knobs Gz2d2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z2d=2 --param-set omegam=0.8 As_1e9=4.5
+knobs Gk2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost k=2 --param-set omegam=0.8 As_1e9=4.5
+knobs Gall2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=2,z2d=2,k=2 --param-set omegam=0.8 As_1e9=4.5
+knobs Gz1d8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=8 --param-set omegam=0.8 As_1e9=4.5
+knobs Gz2d8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z2d=8 --param-set omegam=0.8 As_1e9=4.5
+knobs Gk8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost k=8 --param-set omegam=0.8 As_1e9=4.5
+knobs Gall8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --grid-boost z1d=8,z2d=8,k=8 --param-set omegam=0.8 As_1e9=4.5
+# -- c5: accuracyboost ladder of the no-FMA -O3 build at U = 32
+knobsso NFa2U32c5 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=2 --param-set omegam=0.8 As_1e9=4.5
+knobsso NFa3U32c5 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=3 --param-set omegam=0.8 As_1e9=4.5
+knobsso NFa5U32c5 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=5 --param-set omegam=0.8 As_1e9=4.5
+knobsso NFa8U32c5 {W}/chains/build_diag_59498770/nofma 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=8 --param-set omegam=0.8 As_1e9=4.5

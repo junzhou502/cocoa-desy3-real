@@ -24,6 +24,9 @@ point_mass_model: 0
 #   "cosmosis"     = CosmoSIS TATT rule (first matter_power_lin k_h grid point
 #                    above 0.03 h/Mpc) at the live h; see _cosmolike_prototype_base.py
 ia_growth_k_hmpc: null
+# UP-SAMPLING FACTOR U of the TATT FAST-PT table (cubic spline in ln k onto U x more
+# nodes, once per cosmology): 1 (default) = off; see _cosmolike_prototype_base.py
+fptia_upsampling: 1
 use_emulator: False
 
 # BIAS REDSHIFT EVOLUTION [b1,b2,bs2,b3,bmag] (see bias.c)

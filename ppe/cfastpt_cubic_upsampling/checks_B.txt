@@ -1,0 +1,57 @@
+# checks of job B (check_bytes.py)
+# default configuration = stored references (old .so, 08cdda3a...)
+same {J}/REGbase/REF.modelvector {YC}/g_reg_baseline/g_reg_baseline.modelvector
+same {J}/REGcamb/REF.modelvector {YC}/g_reg_cambmatch/g_reg_cambmatch.modelvector
+same {J}/REGgk/REF.modelvector {YC}/g_gk_cosmosis/g_gk_cosmosis.modelvector
+same {J}/REGnoia/REF.modelvector {YC}/g_noia_gk/g_noia_gk.modelvector
+same {J}/D_FID/FID.modelvector {TXC}/tx_ccG1_59486353/F1/FID/FID.modelvector
+same {J}/D_HA/HA.modelvector {TXC}/tx_ccG1_59486353/F1/HA/HA.modelvector
+same {J}/D_N0/N0.modelvector {TXC}/tx_ccG1_59486353/F1/N0/N0.modelvector
+# fptia_upsampling = 1 = the old table at every ladder point (ab 1)
+same {J}/U1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG1_59486353/F1/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/U1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/F1c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# repeats (cached=False) inside each process
+same {J}/U1c0/FID__repeat.modelvector {J}/U1c0/FID.modelvector
+same {J}/U2c0/FID__repeat.modelvector {J}/U2c0/FID.modelvector
+same {J}/U4c0/FID__repeat.modelvector {J}/U4c0/FID.modelvector
+same {J}/U8c0/FID__repeat.modelvector {J}/U8c0/FID.modelvector
+same {J}/U16c0/FID__repeat.modelvector {J}/U16c0/FID.modelvector
+same {J}/U32c0/FID__repeat.modelvector {J}/U32c0/FID.modelvector
+same {J}/U64c0/FID__repeat.modelvector {J}/U64c0/FID.modelvector
+same {J}/U1c5/FID__repeat.modelvector {J}/U1c5/FID.modelvector
+same {J}/U2c5/FID__repeat.modelvector {J}/U2c5/FID.modelvector
+same {J}/U4c5/FID__repeat.modelvector {J}/U4c5/FID.modelvector
+same {J}/U8c5/FID__repeat.modelvector {J}/U8c5/FID.modelvector
+same {J}/U16c5/FID__repeat.modelvector {J}/U16c5/FID.modelvector
+same {J}/U32c5/FID__repeat.modelvector {J}/U32c5/FID.modelvector
+same {J}/U64c5/FID__repeat.modelvector {J}/U64c5/FID.modelvector
+# IA off (A1 = A2 = 0): every TATT term is multiplied by zero, so N0 must not depend on U
+same {J}/U2c0/N0.modelvector {J}/U1c0/N0.modelvector
+same {J}/U4c0/N0.modelvector {J}/U1c0/N0.modelvector
+same {J}/U8c0/N0.modelvector {J}/U1c0/N0.modelvector
+same {J}/U16c0/N0.modelvector {J}/U1c0/N0.modelvector
+same {J}/U32c0/N0.modelvector {J}/U1c0/N0.modelvector
+same {J}/U64c0/N0.modelvector {J}/U1c0/N0.modelvector
+same {J}/U2c5/N0.modelvector {J}/U1c5/N0.modelvector
+same {J}/U4c5/N0.modelvector {J}/U1c5/N0.modelvector
+same {J}/U8c5/N0.modelvector {J}/U1c5/N0.modelvector
+same {J}/U16c5/N0.modelvector {J}/U1c5/N0.modelvector
+same {J}/U32c5/N0.modelvector {J}/U1c5/N0.modelvector
+same {J}/U64c5/N0.modelvector {J}/U1c5/N0.modelvector
+# the option changes the IA vectors
+differ {J}/U2c0/HD.modelvector {J}/U1c0/HD.modelvector
+differ {J}/U64c0/FID.modelvector {J}/U1c0/FID.modelvector
+differ {J}/U2c5/HD.modelvector {J}/U1c5/HD.modelvector
+differ {J}/U64c5/FID.modelvector {J}/U1c5/FID.modelvector
+# determinism: 1 thread = 24 threads
+same {J}/U8c5t1/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {J}/U8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# switch test
+same {J}/SWc5/HD__U1_0.modelvector {J}/U1c5/HD.modelvector
+same {J}/SWc5/HD__U8_1.modelvector {J}/U8c5/HD.modelvector
+same {J}/SWc5/HD__U1_2.modelvector {J}/U1c5/HD.modelvector
+same {J}/SWc5/HD__U64_3.modelvector {J}/U64c5/HD.modelvector
+same {J}/SWc5/HD__U8_4.modelvector {J}/U8c5/HD.modelvector
+same {J}/SWc5/HD__U2_5.modelvector {J}/U2c5/HD.modelvector
+# DEBUG (-O0) build agrees with the optimised build to rounding
+close {J}/DBG1c5/*.modelvector@HD,FID {J}/U1c5/*.modelvector@HD,FID 1e-8
+close {J}/DBG8c5/*.modelvector@HD,FID {J}/U8c5/*.modelvector@HD,FID 1e-8

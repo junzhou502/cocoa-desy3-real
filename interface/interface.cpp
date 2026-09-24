@@ -59,6 +59,14 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       (py::arg("integration_accuracy") = 0).none(false)
     );
 
+  m.def("init_FPTIA_upsampling",
+      &cosmolike_interface::init_FPTIA_upsampling,
+      "Up-sampling factor U of the TATT FAST-PT table: 1 = off (default); "
+      "U > 1 resamples each row with a cubic spline in ln k onto U times more "
+      "nodes, once per cosmology (get_FPT_IA in pt_cfastpt.c)",
+      py::arg("factor").none(false).noconvert()
+    );
+
   m.def("init_baryons_contamination",
       py::overload_cast<std::string, std::string>(
          &cosmolike_interface::init_baryons_contamination),

@@ -1,0 +1,457 @@
+{
+ "description": "task cfastpt-cubic-upsampling-20260924, experiment 3 (jobs 59498280, 59498861, 59499413)",
+ "ab_ladder": {
+  "c0": {
+   "OPT_U32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c0",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0"
+   },
+   "NOFMA_U32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa1U32c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa2U32c0",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa3U32c0",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa5U32c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa8U32c0"
+   }
+  },
+  "c5": {
+   "OPT_U32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c5",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5"
+   },
+   "NOFMA_U32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa2U32c5",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa3U32c5",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa5U32c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa8U32c5"
+   }
+  }
+ },
+ "steps": [
+  {
+   "title": "components of accuracyboost, c0, U 32 (base ab 1)",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0",
+   "runs": {
+    "core_1.999(N_ell,N_a)": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c0",
+    "core_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c0",
+    "core_3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K3c0",
+    "core_5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K5c0",
+    "core_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K8c0",
+    "kmax_100": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M100c0",
+    "kmax_150": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M150c0",
+    "kmax_250": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M250c0",
+    "kmax_400": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M400c0",
+    "grid_z1d_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz1d2c0",
+    "grid_z2d_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz2d2c0",
+    "grid_k_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gk2c0",
+    "grid_all_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gall2c0",
+    "grid_z1d_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz1d8c0",
+    "grid_z2d_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz2d8c0",
+    "grid_k_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gk8c0",
+    "grid_all_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gall8c0",
+    "FULL_ab2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "FULL_ab3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c0",
+    "FULL_ab5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0",
+    "FULL_ab8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0"
+   }
+  },
+  {
+   "title": "FAST-PT nodes only (core 1.999 -> 2), c0, U 32",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c0",
+   "runs": {
+    "core_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c0"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT) per accuracyboost, c0, U 32",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0",
+   "runs": {
+    "ab1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa1U32c0"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c0, U 32, ab 2",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+   "runs": {
+    "ab2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa2U32c0"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c0, U 32, ab 3",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c0",
+   "runs": {
+    "ab3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa3U32c0"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c0, U 32, ab 5",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0",
+   "runs": {
+    "ab5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa5U32c0"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c0, U 32, ab 8",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0",
+   "runs": {
+    "ab8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa8U32c0"
+   }
+  },
+  {
+   "title": "components of accuracyboost, c5, U 32 (base ab 1)",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+   "runs": {
+    "core_1.999(N_ell,N_a)": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c5",
+    "core_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c5",
+    "core_3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K3c5",
+    "core_5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K5c5",
+    "core_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K8c5",
+    "kmax_100": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M100c5",
+    "kmax_150": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M150c5",
+    "kmax_250": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M250c5",
+    "kmax_400": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M400c5",
+    "grid_z1d_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz1d2c5",
+    "grid_z2d_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz2d2c5",
+    "grid_k_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gk2c5",
+    "grid_all_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gall2c5",
+    "grid_z1d_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz1d8c5",
+    "grid_z2d_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gz2d8c5",
+    "grid_k_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gk8c5",
+    "grid_all_8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gall8c5",
+    "FULL_ab2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "FULL_ab3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c5",
+    "FULL_ab5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5",
+    "FULL_ab8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5"
+   }
+  },
+  {
+   "title": "FAST-PT nodes only (core 1.999 -> 2), c5, U 32",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c5",
+   "runs": {
+    "core_2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c5"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT) per accuracyboost, c5, U 32",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+   "runs": {
+    "ab1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c5, U 32, ab 2",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+   "runs": {
+    "ab2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa2U32c5"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c5, U 32, ab 3",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c5",
+   "runs": {
+    "ab3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa3U32c5"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c5, U 32, ab 5",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5",
+   "runs": {
+    "ab5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa5U32c5"
+   }
+  },
+  {
+   "title": "rounding sensitivity (no-FMA - OPT), c5, U 32, ab 8",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5",
+   "runs": {
+    "ab8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa8U32c5"
+   }
+  }
+ ],
+ "cosines": [
+  {
+   "title": "(core 1 -> 2) vs (ab 1 -> 2), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(FAST-PT nodes 1.999 -> 2) vs (ab 1 -> 2), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(N_ell,N_a 1 -> 1.999) vs (ab 1 -> 2), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(kmax 50 -> 100) vs (ab 1 -> 2), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M100c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(grids 1 -> 2) vs (ab 1 -> 2), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gall2c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(no-FMA - OPT at ab 1) vs (FAST-PT nodes 1.999 -> 2), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa1U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c0"
+   ]
+  },
+  {
+   "title": "(no-FMA - OPT at ab 1) vs (kmax 50 -> 100), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa1U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M100c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(ab 1 -> 2 no-FMA) vs (ab 1 -> 2 OPT), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa1U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ]
+  },
+  {
+   "title": "(ab 5 -> 8 no-FMA) vs (ab 5 -> 8 OPT), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa8U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa5U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0"
+   ]
+  },
+  {
+   "title": "(core 5 -> 8) vs (ab 5 -> 8), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K8c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K5c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0"
+   ]
+  },
+  {
+   "title": "(kmax 250 -> 400) vs (ab 5 -> 8), c0 U32",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M400c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M250c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0"
+   ]
+  },
+  {
+   "title": "(core 1 -> 2) vs (ab 1 -> 2), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(FAST-PT nodes 1.999 -> 2) vs (ab 1 -> 2), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(N_ell,N_a 1 -> 1.999) vs (ab 1 -> 2), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(kmax 50 -> 100) vs (ab 1 -> 2), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M100c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(grids 1 -> 2) vs (ab 1 -> 2), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/Gall2c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(no-FMA - OPT at ab 1) vs (FAST-PT nodes 1.999 -> 2), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K2c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K1p999c5"
+   ]
+  },
+  {
+   "title": "(no-FMA - OPT at ab 1) vs (kmax 50 -> 100), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M100c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(ab 1 -> 2 no-FMA) vs (ab 1 -> 2 OPT), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(ab 5 -> 8 no-FMA) vs (ab 5 -> 8 OPT), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa8U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/NFa5U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5"
+   ]
+  },
+  {
+   "title": "(core 5 -> 8) vs (ab 5 -> 8), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K8c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/K5c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5"
+   ]
+  },
+  {
+   "title": "(kmax 250 -> 400) vs (ab 5 -> 8), c5 U32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M400c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59499413/M250c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5"
+   ]
+  }
+ ]
+}

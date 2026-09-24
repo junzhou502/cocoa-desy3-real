@@ -1,0 +1,17 @@
+# checks of job C2 (check_bytes.py)
+# core boost 1.999 changes N_a and N_ell only; its N0 must differ from the base (all probes move), and
+# core boost X = accuracyboost X in the core; N0 of every component run is finite (checked by the driver)
+differ {J}/K1p999c0/N0.modelvector {CH}/fptup_runs_59498280/U32c0/N0.modelvector
+differ {J}/K2c5/HD.modelvector {J}/K1p999c5/HD.modelvector
+# FAST-PT nodes only (1.999 -> 2): N0 has no FAST-PT term, so it must not change
+same {J}/K2c0/N0.modelvector {J}/K1p999c0/N0.modelvector
+same {J}/K2c5/N0.modelvector {J}/K1p999c5/N0.modelvector
+# no-FMA build: N0 and LN (no FAST-PT term) agree with the -O3 build to rounding at every ab
+close {J}/NFa2U32c0/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L2U32c0/*.modelvector@N0,LN 1e-9
+close {J}/NFa3U32c0/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L3U32c0/*.modelvector@N0,LN 1e-9
+close {J}/NFa5U32c0/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L5U32c0/*.modelvector@N0,LN 1e-9
+close {J}/NFa8U32c0/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L8U32c0/*.modelvector@N0,LN 1e-9
+close {J}/NFa2U32c5/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L2U32c5/*.modelvector@N0,LN 1e-9
+close {J}/NFa3U32c5/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L3U32c5/*.modelvector@N0,LN 1e-9
+close {J}/NFa5U32c5/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L5U32c5/*.modelvector@N0,LN 1e-9
+close {J}/NFa8U32c5/*.modelvector@N0,LN {CH}/fptup_runs_59498861/L8U32c5/*.modelvector@N0,LN 1e-9

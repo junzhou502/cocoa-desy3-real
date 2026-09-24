@@ -1,0 +1,18 @@
+# Task cfastpt-cubic-upsampling-20260924, job F: final validation with the PRODUCTION .so built from
+# the committed code (run without SO_DIR). Defaults against the stored references; U = 32 against the
+# out-of-tree development build (jobs 59498280, 59498861); determinism; switch test.
+diag REGbase {YDIR}/g_reg_baseline.yaml {TX}/plans/ref_only.json
+diag REGcamb {YDIR}/g_reg_cambmatch.yaml {TX}/plans/ref_only.json
+diag REGgk {YDIR}/g_gk_cosmosis.yaml {TX}/plans/ref_only.json
+diag REGnoia {YDIR}/g_noia_gk.yaml {TX}/plans/ref_only.json
+knobs D_FID 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels FID
+knobs D_HA 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels HA
+knobs D_N0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels N0
+knobs U1c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=1
+knobs U1c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=1 --param-set omegam=0.8 As_1e9=4.5
+knobs L8U1c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=1 accuracyboost=8
+knobs U32c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=32
+knobs U32c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=32 --param-set omegam=0.8 As_1e9=4.5
+knobs L2U32c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 accuracyboost=2 --param-set omegam=0.8 As_1e9=4.5
+knobs U32c5t1 1 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=32 --param-set omegam=0.8 As_1e9=4.5
+knobs SWc5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --labels HD --upsample-sequence 1,32,1 --param-set omegam=0.8 As_1e9=4.5

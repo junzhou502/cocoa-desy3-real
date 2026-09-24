@@ -187,6 +187,20 @@ class _cosmolike_prototype_base(DataSetLikelihood):
           self.allsims = ini.relativeFileName('all_sims_hdf5_file')
           ci.init_baryons_contamination(sim = sim, allsims=allsims)
 
+    # Up-sampling factor U of CosmoLike's TATT FAST-PT table (get_FPT_IA in
+    # cosmolike_core/cosmolike/pt_cfastpt.c). FAST-PT runs on 270 + 200*(int
+    # accuracyboost - 1) ln k nodes and the Limber integrals interpolate the
+    # table linearly. U > 1 resamples it once per cosmology with a cubic spline
+    # onto U times more nodes. 1 (default) = off, bitwise the historical table.
+    # Measured on DES Y3 MagLim (ppe/cfastpt_cubic_upsampling): U = 32 is
+    # converged (within chi2 = 1.1e-5 of U = 64 at Omega_m = 0.3) and costs no
+    # measurable time. It does not make the TATT vector converge in
+    # accuracyboost: FAST-PT's own output changes more than that.
+    _u = getattr(self, "fptia_upsampling", 1)
+    self.fptia_upsampling = 1 if _u is None else int(_u)
+    ci.init_FPTIA_upsampling(factor=self.fptia_upsampling)
+    self.log.info('fptia_upsampling = %d', self.fptia_upsampling)
+
     if self.use_baryon_pca:
       baryon_pca_file = ini.relativeFileName('baryon_pca_file')
       self.npcs = 4

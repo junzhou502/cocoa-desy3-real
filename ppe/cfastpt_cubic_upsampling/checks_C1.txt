@@ -1,0 +1,22 @@
+# checks of job C1 (check_bytes.py)
+# U = 1 at accuracyboost 2, 3, 5, 8 = the stored ladder vectors (old .so)
+same {J}/L2U1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L2c0/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L3U1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG1_59486353/F3/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L5U1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG1_59486353/F5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L8U1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L8c0/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L2U1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L2c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L3U1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L3c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L5U1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L5c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/L8U1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L8c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# IA off: N0 does not depend on U at any accuracyboost
+same {J}/L2U32c0/N0.modelvector {J}/L2U1c0/N0.modelvector
+same {J}/L3U32c0/N0.modelvector {J}/L3U1c0/N0.modelvector
+same {J}/L5U32c0/N0.modelvector {J}/L5U1c0/N0.modelvector
+same {J}/L8U32c0/N0.modelvector {J}/L8U1c0/N0.modelvector
+same {J}/L2U32c5/N0.modelvector {J}/L2U1c5/N0.modelvector
+same {J}/L3U32c5/N0.modelvector {J}/L3U1c5/N0.modelvector
+same {J}/L5U32c5/N0.modelvector {J}/L5U1c5/N0.modelvector
+same {J}/L8U32c5/N0.modelvector {J}/L8U1c5/N0.modelvector
+# experiment 4 runs at the 7 ladder points = the U = 32 runs of job 59498280 (c0, c5)
+same {J}/X32c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {CH}/fptup_runs_59498280/U32c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/X32c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {CH}/fptup_runs_59498280/U32c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm

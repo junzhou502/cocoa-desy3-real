@@ -1,0 +1,248 @@
+{
+ "description": "task cfastpt-cubic-upsampling-20260924, experiments 2 and 4 and the build-flag diagnostics (jobs 59498280, 59498861)",
+ "ab_ladder": {
+  "c0": {
+   "U1": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c0",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U1c0",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U1c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U1c0"
+   },
+   "U32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c0",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c0"
+   }
+  },
+  "c5": {
+   "U1": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c5",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U1c5",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U1c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U1c5"
+   },
+   "U32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U32c5",
+    "5": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L5U32c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L8U32c5"
+   }
+  }
+ },
+ "steps": [
+  {
+   "title": "build flags, c0, ab 1, U 1",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c0",
+   "runs": {
+    "DEBUG_O0": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/DBGa1U1c0",
+    "NOFMA_O3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c0"
+   }
+  },
+  {
+   "title": "build flags, c5, ab 1, U 1",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5",
+   "runs": {
+    "DEBUG_O0": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/DBGa1U1c5",
+    "NOFMA_O3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c5",
+    "ASAN_O1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/ASa1U1c5"
+   }
+  },
+  {
+   "title": "build flags, c5, ab 2, U 1",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c5",
+   "runs": {
+    "DEBUG_O0": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/DBGa2U1c5",
+    "NOFMA_O3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa2U1c5"
+   }
+  },
+  {
+   "title": "build flags, c5, ab 1, U 32",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+   "runs": {
+    "DEBUG_O0": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/DBGa1U32c5",
+    "NOFMA_O3": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5",
+    "ASAN_O1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/ASa1U32c5"
+   }
+  }
+ ],
+ "cosines": [
+  {
+   "title": "(NOFMA - OPT) vs (ab2 - ab1), c0, U 1",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c0"
+   ]
+  },
+  {
+   "title": "(NOFMA - OPT) vs (ab2 - ab1), c5, U 1",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5"
+   ]
+  },
+  {
+   "title": "(NOFMA - OPT) vs (ab2 - ab1), c5, U 32",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ]
+  },
+  {
+   "title": "(NOFMA - OPT at ab 2) vs (ab3 - ab2), c5, U 1",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa2U1c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L3U1c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c5"
+   ]
+  },
+  {
+   "title": "(NOFMA - OPT) vs (U32 - U1), c5, ab 1",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5"
+   ]
+  },
+  {
+   "title": "(ab2 - ab1 at U 32) vs (ab2 - ab1 at U 1), c5",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5"
+   ]
+  },
+  {
+   "title": "(ab2 - ab1 at U 32) vs (ab2 - ab1 at U 1), c0",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U32c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/L2U1c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c0"
+   ]
+  }
+ ],
+ "cross": {
+  "c0": {
+   "cocoa": {
+    "U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG1_59486353/F1",
+    "U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/X32c0"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/R.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/R_c1.npz"
+   }
+  },
+  "c1": {
+   "cocoa": {
+    "U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c1",
+    "U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/X32c1"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c1.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c1.npz"
+   }
+  },
+  "c2": {
+   "cocoa": {
+    "U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c2",
+    "U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/X32c2"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c2.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c2.npz"
+   }
+  },
+  "c3": {
+   "cocoa": {
+    "U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c3",
+    "U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/X32c3"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c3.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c3.npz"
+   }
+  },
+  "c4": {
+   "cocoa": {
+    "U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c4",
+    "U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/X32c4"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c4.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c4.npz"
+   }
+  },
+  "c5": {
+   "cocoa": {
+    "U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c5",
+    "U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/X32c5"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/R@c5.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/R_c1@c5.npz"
+   }
+  },
+  "c5_builds": {
+   "cocoa": {
+    "OPT_U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c5",
+    "NOFMA_U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c5",
+    "OPT_U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c5",
+    "NOFMA_U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U32c5"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/R@c5.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/R_c1@c5.npz"
+   }
+  },
+  "c0_builds": {
+   "cocoa": {
+    "OPT_U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U1c0",
+    "NOFMA_U1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498861/NFa1U1c0",
+    "OPT_U32": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_cubic_upsampling/chains/fptup_runs_59498280/U32c0"
+   },
+   "cosmosis": {
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/R.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/R_c1.npz"
+   }
+  }
+ }
+}

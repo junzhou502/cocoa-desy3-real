@@ -1,0 +1,48 @@
+# Task cfastpt-cubic-upsampling-20260924, job B: regression of the default (U = 1), experiment 1
+# (U ladder at accuracyboost 1, c0 and c5, 7 ladder points), determinism (1 vs 24 threads), the
+# U switch test, the DEBUG build, experiment 5 (runtime per U, paired design, two passes).
+# -- default-configuration regression (no fptia_upsampling option at all)
+diag REGbase {YDIR}/g_reg_baseline.yaml {TX}/plans/ref_only.json
+diag REGcamb {YDIR}/g_reg_cambmatch.yaml {TX}/plans/ref_only.json
+diag REGgk {YDIR}/g_gk_cosmosis.yaml {TX}/plans/ref_only.json
+diag REGnoia {YDIR}/g_noia_gk.yaml {TX}/plans/ref_only.json
+knobs D_FID 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels FID
+knobs D_HA 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels HA
+knobs D_N0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels N0
+# -- experiment 1: U ladder at accuracyboost 1
+knobs U1c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=1
+knobs U2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=2
+knobs U4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=4
+knobs U8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=8
+knobs U16c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=16
+knobs U32c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=32
+knobs U64c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=64
+knobs U1c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=1 --param-set omegam=0.8 As_1e9=4.5
+knobs U2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=2 --param-set omegam=0.8 As_1e9=4.5
+knobs U4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=4 --param-set omegam=0.8 As_1e9=4.5
+knobs U8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=8 --param-set omegam=0.8 As_1e9=4.5
+knobs U16c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=16 --param-set omegam=0.8 As_1e9=4.5
+knobs U32c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=32 --param-set omegam=0.8 As_1e9=4.5
+knobs U64c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --repeat FID --lik-set fptia_upsampling=64 --param-set omegam=0.8 As_1e9=4.5
+# -- determinism: 1 thread
+knobs U8c5t1 1 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_upsampling=8 --param-set omegam=0.8 As_1e9=4.5
+# -- switch test: U changed inside one process (cached=False)
+knobs SWc5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --labels HD --upsample-sequence 1,8,1,64,8,2 --param-set omegam=0.8 As_1e9=4.5
+# -- DEBUG build (-O0): U = 1 and U = 8
+knobsdbg DBG1c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --labels HD,FID --lik-set fptia_upsampling=1 --param-set omegam=0.8 As_1e9=4.5
+knobsdbg DBG8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --labels HD,FID --lik-set fptia_upsampling=8 --param-set omegam=0.8 As_1e9=4.5
+# -- experiment 5: runtime; pass a = U ascending, pass d = U descending; same rows in every process
+knobs T1a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=1
+knobs T2a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=2
+knobs T4a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=4
+knobs T8a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=8
+knobs T16a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=16
+knobs T32a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=32
+knobs T64a 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=64
+knobs T64d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=64
+knobs T32d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=32
+knobs T16d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=16
+knobs T8d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=8
+knobs T4d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=4
+knobs T2d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=2
+knobs T1d 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TX}/timing_points.json --lik-set fptia_upsampling=1
