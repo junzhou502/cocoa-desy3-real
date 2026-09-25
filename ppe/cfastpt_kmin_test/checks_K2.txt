@@ -1,0 +1,11 @@
+# checks of job K2 (check_bytes.py)
+# same settings as job K1's step-2 ladder: identical vectors at the shared points
+same {J}/XK8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Kb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/XK4c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Kb4c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/XK8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Kb8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/XK4c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Kb4c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# k_min does not touch N0 and LN at the default settings
+same {J}/D5nc1/*.modelvector@N0,LN {TXC}/tx_ccG2_59486354/F1c1/*/*.modelvector@N0,LN
+same {J}/D5nc2/*.modelvector@N0,LN {TXC}/tx_ccG2_59486354/F1c2/*/*.modelvector@N0,LN
+same {J}/D5nc3/*.modelvector@N0,LN {TXC}/tx_ccG2_59486354/F1c3/*/*.modelvector@N0,LN
+same {J}/D5nc4/*.modelvector@N0,LN {TXC}/tx_ccG2_59486354/F1c4/*/*.modelvector@N0,LN

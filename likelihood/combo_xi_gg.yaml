@@ -37,6 +37,8 @@ nested_k_grid: False
 # NESTED FAST-PT NODES: False (default) = base + 200*int(accuracyboost - 1) nodes;
 # True = base x 2^ceil(log2(accuracyboost)) nodes (nested)
 fptia_nested_nodes: False
+# LOWER END IN k (c/H0 units) of that table: 1.0e-5 (default); upstream core v4.11.7 uses 0.05
+fptia_kmin: 1.0e-5
 use_emulator: False
 
 # BIAS REDSHIFT EVOLUTION [b1,b2,bs2,b3,bmag] (see bias.c)

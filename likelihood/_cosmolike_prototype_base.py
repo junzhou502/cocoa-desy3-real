@@ -260,6 +260,18 @@ class _cosmolike_prototype_base(DataSetLikelihood):
       _m = int(min(2**np.ceil(np.log2(max(1.0, self.accuracyboost))), 16))
       ci.init_FPTIA_nested_nodes(m=_m)
       self.log.info('fptia_nested_nodes = True: %d x %d FAST-PT nodes', self.fptia_base_nodes, _m)
+    # Lower end in k of that table, in c/H0 units (1e-5 = default = 3.3e-9
+    # h/Mpc; upstream CosmoLike core v4.11.7 uses 0.05 = 1.7e-5 h/Mpc). The
+    # Limber lookups start above 0.66 c/H0 for the DES Y3 sources. Measured on
+    # DES Y3 MagLim (ppe/cfastpt_kmin_test): 0.05 removes the rounding noise of
+    # the TATT terms, so with nested_z_grids, nested_k_grid and fixed FAST-PT
+    # nodes and CAMB kmax the TATT vector converges in accuracyboost. At the
+    # default settings 0.05 moves the fiducial TATT vector by chi2 0.004
+    # (Omega_m 0.3) and 417 (Omega_m 0.8, 1e9 A_s 4.5) over the 462 cut points.
+    _km = getattr(self, "fptia_kmin", 1.0e-5)
+    self.fptia_kmin = 1.0e-5 if _km is None else float(_km)
+    ci.init_FPTIA_kmin(kmin=self.fptia_kmin)
+    self.log.info('fptia_kmin = %.6g (c/H0 units)', self.fptia_kmin)
 
     if self.use_baryon_pca:
       baryon_pca_file = ini.relativeFileName('baryon_pca_file')

@@ -1,0 +1,235 @@
+{
+ "description": "task cfastpt-kmin-test-20260924, step 5: CoCoA (k_min 0.05, converged setting) vs CosmoSIS C, C_c1, R, R_c1 at the named points, six cosmologies (jobs 59514998, 59515223)",
+ "cross": {
+  "c0": {
+   "cocoa": {
+    "old_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG1_59486353/F1",
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59514998/D5c0",
+    "K_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c0",
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c0"
+   },
+   "cosmosis": {
+    "C": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/C.npz",
+    "C_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/C_c1.npz",
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/R.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csB_59486005/R_c1.npz"
+   }
+  },
+  "c1": {
+   "cocoa": {
+    "old_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c1",
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc1",
+    "K_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c1",
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c1"
+   },
+   "cosmosis": {
+    "C": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C@c1.npz",
+    "C_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C_c1@c1.npz",
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c1.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c1.npz"
+   }
+  },
+  "c2": {
+   "cocoa": {
+    "old_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c2",
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc2",
+    "K_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c2",
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c2"
+   },
+   "cosmosis": {
+    "C": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C@c2.npz",
+    "C_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C_c1@c2.npz",
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c2.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c2.npz"
+   }
+  },
+  "c3": {
+   "cocoa": {
+    "old_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c3",
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc3",
+    "K_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c3",
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c3"
+   },
+   "cosmosis": {
+    "C": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C@c3.npz",
+    "C_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C_c1@c3.npz",
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c3.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c3.npz"
+   }
+  },
+  "c4": {
+   "cocoa": {
+    "old_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c4",
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc4",
+    "K_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c4",
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c4"
+   },
+   "cosmosis": {
+    "C": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C@c4.npz",
+    "C_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/C_c1@c4.npz",
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R@c4.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csC_59486220/R_c1@c4.npz"
+   }
+  },
+  "c5": {
+   "cocoa": {
+    "old_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c5",
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59514998/D5c5",
+    "K_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c5",
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c5"
+   },
+   "cosmosis": {
+    "C": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/C@c5.npz",
+    "C_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/C_c1@c5.npz",
+    "R": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/R@c5.npz",
+    "R_c1": "/project/chihway/junzhou/Project-Projection-Effect/cosmosis/des_y3/output/tx_csD_59486221/R_c1@c5.npz"
+   }
+  }
+ },
+ "steps": [
+  {
+   "title": "converged setting b 4 -> b 8, c0",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c0",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c0"
+   }
+  },
+  {
+   "title": "k_min 0.05 - 1e-5 at the default settings (b 1), c0",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG1_59486353/F1",
+   "runs": {
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59514998/D5c0"
+   }
+  },
+  {
+   "title": "converged setting (K b8) - old default (b1), c0",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG1_59486353/F1",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c0"
+   }
+  },
+  {
+   "title": "converged setting b 4 -> b 8, c1",
+   "cosmo": "c1",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c1",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c1"
+   }
+  },
+  {
+   "title": "k_min 0.05 - 1e-5 at the default settings (b 1), c1",
+   "cosmo": "c1",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c1",
+   "runs": {
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc1"
+   }
+  },
+  {
+   "title": "converged setting (K b8) - old default (b1), c1",
+   "cosmo": "c1",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c1",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c1"
+   }
+  },
+  {
+   "title": "converged setting b 4 -> b 8, c2",
+   "cosmo": "c2",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c2",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c2"
+   }
+  },
+  {
+   "title": "k_min 0.05 - 1e-5 at the default settings (b 1), c2",
+   "cosmo": "c2",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c2",
+   "runs": {
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc2"
+   }
+  },
+  {
+   "title": "converged setting (K b8) - old default (b1), c2",
+   "cosmo": "c2",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c2",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c2"
+   }
+  },
+  {
+   "title": "converged setting b 4 -> b 8, c3",
+   "cosmo": "c3",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c3",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c3"
+   }
+  },
+  {
+   "title": "k_min 0.05 - 1e-5 at the default settings (b 1), c3",
+   "cosmo": "c3",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c3",
+   "runs": {
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc3"
+   }
+  },
+  {
+   "title": "converged setting (K b8) - old default (b1), c3",
+   "cosmo": "c3",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c3",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c3"
+   }
+  },
+  {
+   "title": "converged setting b 4 -> b 8, c4",
+   "cosmo": "c4",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c4",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c4"
+   }
+  },
+  {
+   "title": "k_min 0.05 - 1e-5 at the default settings (b 1), c4",
+   "cosmo": "c4",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c4",
+   "runs": {
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/D5nc4"
+   }
+  },
+  {
+   "title": "converged setting (K b8) - old default (b1), c4",
+   "cosmo": "c4",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c4",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c4"
+   }
+  },
+  {
+   "title": "converged setting b 4 -> b 8, c5",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK4c5",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c5"
+   }
+  },
+  {
+   "title": "k_min 0.05 - 1e-5 at the default settings (b 1), c5",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c5",
+   "runs": {
+    "kmin0.05_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59514998/D5c5"
+   }
+  },
+  {
+   "title": "converged setting (K b8) - old default (b1), c5",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_tatt_crosspipeline/chains/tx_ccG2_59486354/F1c5",
+   "runs": {
+    "K_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/cfastpt_kmin_test/chains/km_runs_59515223/XK8c5"
+   }
+  }
+ ]
+}

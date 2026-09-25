@@ -1,0 +1,15 @@
+# Task cfastpt-kmin-test-20260924, job F: final validation with the PRODUCTION .so built from the
+# committed code (run without SO_DIR): defaults against the stored references; k_min 0.05 runs against
+# the development build (jobs 59514998, 59515223); determinism.
+diag REGbase {YDIR}/g_reg_baseline.yaml {TX}/plans/ref_only.json
+diag REGcamb {YDIR}/g_reg_cambmatch.yaml {TX}/plans/ref_only.json
+diag REGgk {YDIR}/g_gk_cosmosis.yaml {TX}/plans/ref_only.json
+diag REGnoia {YDIR}/g_noia_gk.yaml {TX}/plans/ref_only.json
+knobs D_FID 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels FID
+knobs D_HA 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels HA
+knobs D_N0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels N0
+knobs Kb8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --fpt-nodes-fixed 1100
+knobs Kb8c0t1 1 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --fpt-nodes-fixed 1100
+knobs Kb2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 kmax_boltzmann=200 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs Ab4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=4.5
+knobs D5c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --lik-set fptia_kmin=0.05 --labels N0,FID,HA,HD,LN,LT,LTm

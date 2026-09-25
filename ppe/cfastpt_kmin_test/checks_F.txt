@@ -1,0 +1,15 @@
+# checks of job F (check_bytes.py): production .so
+same {J}/REGbase/REF.modelvector {YC}/g_reg_baseline/g_reg_baseline.modelvector
+same {J}/REGcamb/REF.modelvector {YC}/g_reg_cambmatch/g_reg_cambmatch.modelvector
+same {J}/REGgk/REF.modelvector {YC}/g_gk_cosmosis/g_gk_cosmosis.modelvector
+same {J}/REGnoia/REF.modelvector {YC}/g_noia_gk/g_noia_gk.modelvector
+same {J}/D_FID/FID.modelvector {TXC}/tx_ccG1_59486353/F1/FID/FID.modelvector
+same {J}/D_HA/HA.modelvector {TXC}/tx_ccG1_59486353/F1/HA/HA.modelvector
+same {J}/D_N0/N0.modelvector {TXC}/tx_ccG1_59486353/F1/N0/N0.modelvector
+# production = development build
+same {J}/Kb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Kb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Kb2c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Kb2c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Ab4c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/Ab4c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/D5c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {KM}/km_runs_59514998/D5c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# 1 thread = 24 threads
+same {J}/Kb8c0t1/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {J}/Kb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm

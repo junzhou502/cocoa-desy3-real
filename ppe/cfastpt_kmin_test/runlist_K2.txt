@@ -1,0 +1,20 @@
+# Task cfastpt-kmin-test-20260924, job K2 (build 59514911): step 5 CoCoA side. The converged setting of
+# step 2 (k_min 0.05, nested z and k grids, cFASTPT nodes fixed at 1100, CAMB k_max 400) at accuracyboost 8
+# (XK8) and 4 (XK4, convergence check), and k_min 0.05 at the default settings (D5n, b = 1), at the 10
+# named IA points and six cosmologies.
+knobs XK8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --fpt-nodes-fixed 1100
+knobs XK4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --fpt-nodes-fixed 1100
+knobs XK8c1 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.5 As_1e9=2.19 --fpt-nodes-fixed 1100
+knobs XK4c1 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.5 As_1e9=2.19 --fpt-nodes-fixed 1100
+knobs XK8c2 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=2.19 --fpt-nodes-fixed 1100
+knobs XK4c2 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=2.19 --fpt-nodes-fixed 1100
+knobs XK8c3 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.3 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs XK4c3 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.3 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs XK8c4 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.5 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs XK4c4 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.5 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs XK8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=8 kmax_boltzmann=50 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs XK4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_kmin=0.05 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=4.5 --fpt-nodes-fixed 1100
+knobs D5nc1 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set fptia_kmin=0.05 --param-set omegam=0.5 As_1e9=2.19
+knobs D5nc2 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set fptia_kmin=0.05 --param-set omegam=0.8 As_1e9=2.19
+knobs D5nc3 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set fptia_kmin=0.05 --param-set omegam=0.3 As_1e9=4.5
+knobs D5nc4 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_named.json --lik-set fptia_kmin=0.05 --param-set omegam=0.5 As_1e9=4.5

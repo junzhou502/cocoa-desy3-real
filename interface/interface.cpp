@@ -81,6 +81,13 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       py::arg("m").none(false).noconvert()
     );
 
+  m.def("init_FPTIA_kmin",
+      &cosmolike_interface::init_FPTIA_kmin,
+      "Lower end in k (c/H0 units) of the TATT FAST-PT table: 1e-5 = default; "
+      "upstream CosmoLike v4.11.7 uses 0.05 (get_FPT_IA in pt_cfastpt.c)",
+      py::arg("kmin").none(false)
+    );
+
   m.def("init_baryons_contamination",
       py::overload_cast<std::string, std::string>(
          &cosmolike_interface::init_baryons_contamination),
