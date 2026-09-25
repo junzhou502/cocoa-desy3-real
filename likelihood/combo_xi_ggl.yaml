@@ -27,6 +27,16 @@ ia_growth_k_hmpc: null
 # UP-SAMPLING FACTOR U of the TATT FAST-PT table (cubic spline in ln k onto U x more
 # nodes, once per cosmology): 1 (default) = off; see _cosmolike_prototype_base.py
 fptia_upsampling: 1
+# BASE NODE COUNT of that table (270 + 200*int(accuracyboost - 1) nodes by default;
+# upstream core v4.11.7 uses 1100)
+fptia_base_nodes: 270
+# NESTED INTERPOLATION GRIDS: False (default) = historical z / log10k grids; True =
+# boost-1 grids with 2^ceil(log2(accuracyboost)) times more intervals (nested)
+nested_z_grids: False
+nested_k_grid: False
+# NESTED FAST-PT NODES: False (default) = base + 200*int(accuracyboost - 1) nodes;
+# True = base x 2^ceil(log2(accuracyboost)) nodes (nested)
+fptia_nested_nodes: False
 use_emulator: False 
 
 # BIAS REDSHIFT EVOLUTION [b1,b2,bs2,b3,bmag] (see bias.c)

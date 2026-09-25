@@ -1,0 +1,17 @@
+# Task desy3-nested-grids-convergence-20260924, job F: final validation with the PRODUCTION .so built
+# from the committed code (run without SO_DIR): defaults against the stored references, the new
+# options against the development build (jobs 59511807, 59512774, 59513635), determinism.
+diag REGbase {YDIR}/g_reg_baseline.yaml {TX}/plans/ref_only.json
+diag REGcamb {YDIR}/g_reg_cambmatch.yaml {TX}/plans/ref_only.json
+diag REGgk {YDIR}/g_gk_cosmosis.yaml {TX}/plans/ref_only.json
+diag REGnoia {YDIR}/g_noia_gk.yaml {TX}/plans/ref_only.json
+knobs D_FID 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels FID
+knobs D_HA 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels HA
+knobs D_N0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels N0
+knobs Bb4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4
+knobs S1b2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 fptia_base_nodes=1100 --param-set omegam=0.8 As_1e9=4.5
+knobs S2b4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 fptia_base_nodes=1100 nested_z_grids=True
+knobs S5b2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True fptia_nested_nodes=True --param-set omegam=0.8 As_1e9=4.5
+knobs S5b8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True fptia_nested_nodes=True
+knobs S5b8c0t1 1 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True fptia_nested_nodes=True
+knobs F4kb4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 kmax_boltzmann=100 fptia_base_nodes=1100 nested_z_grids=True nested_k_grid=True --param-set omegam=0.8 As_1e9=4.5 --fpt-nodes-fixed 1100

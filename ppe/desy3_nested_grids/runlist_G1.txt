@@ -1,0 +1,38 @@
+# Task desy3-nested-grids-convergence-20260924, job G1: default regression, the baseline ladder and
+# steps 1 (cFASTPT base nodes 1100) and 2 (1 + nested z grids), accuracyboost 1, 2, 4, 8, c0 and c5.
+diag REGbase {YDIR}/g_reg_baseline.yaml {TX}/plans/ref_only.json
+diag REGcamb {YDIR}/g_reg_cambmatch.yaml {TX}/plans/ref_only.json
+diag REGgk {YDIR}/g_gk_cosmosis.yaml {TX}/plans/ref_only.json
+diag REGnoia {YDIR}/g_noia_gk.yaml {TX}/plans/ref_only.json
+knobs D_FID 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels FID
+knobs D_HA 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels HA
+knobs D_N0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points.json --labels N0
+# -- the three new options given explicitly at their defaults
+knobs X0c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set fptia_base_nodes=270 nested_z_grids=False nested_k_grid=False
+# -- B: baseline (accuracyboost only)
+knobs Bb1c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=1
+knobs Bb2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2
+knobs Bb4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4
+knobs Bb8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8
+knobs Bb1c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=1 --param-set omegam=0.8 As_1e9=4.5
+knobs Bb2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 --param-set omegam=0.8 As_1e9=4.5
+knobs Bb4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 --param-set omegam=0.8 As_1e9=4.5
+knobs Bb8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 --param-set omegam=0.8 As_1e9=4.5
+# -- S1: fptia_base_nodes=1100
+knobs S1b1c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=1 fptia_base_nodes=1100
+knobs S1b2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 fptia_base_nodes=1100
+knobs S1b4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 fptia_base_nodes=1100
+knobs S1b8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 fptia_base_nodes=1100
+knobs S1b1c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=1 fptia_base_nodes=1100 --param-set omegam=0.8 As_1e9=4.5
+knobs S1b2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 fptia_base_nodes=1100 --param-set omegam=0.8 As_1e9=4.5
+knobs S1b4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 fptia_base_nodes=1100 --param-set omegam=0.8 As_1e9=4.5
+knobs S1b8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 fptia_base_nodes=1100 --param-set omegam=0.8 As_1e9=4.5
+# -- S2: fptia_base_nodes=1100 nested_z_grids=True
+knobs S2b1c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=1 fptia_base_nodes=1100 nested_z_grids=True
+knobs S2b2c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 fptia_base_nodes=1100 nested_z_grids=True
+knobs S2b4c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 fptia_base_nodes=1100 nested_z_grids=True
+knobs S2b8c0 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 fptia_base_nodes=1100 nested_z_grids=True
+knobs S2b1c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=1 fptia_base_nodes=1100 nested_z_grids=True --param-set omegam=0.8 As_1e9=4.5
+knobs S2b2c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=2 fptia_base_nodes=1100 nested_z_grids=True --param-set omegam=0.8 As_1e9=4.5
+knobs S2b4c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=4 fptia_base_nodes=1100 nested_z_grids=True --param-set omegam=0.8 As_1e9=4.5
+knobs S2b8c5 24 --yaml {YDIR}/g_gk_cosmosis.yaml --points-json {TXP}/ia_points_ladder.json --lik-set accuracyboost=8 fptia_base_nodes=1100 nested_z_grids=True --param-set omegam=0.8 As_1e9=4.5

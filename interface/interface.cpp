@@ -67,6 +67,20 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       py::arg("factor").none(false).noconvert()
     );
 
+  m.def("init_FPTIA_base_nodes",
+      &cosmolike_interface::init_FPTIA_base_nodes,
+      "Base node count of the TATT FAST-PT table: FPTIA.N = nodes + "
+      "200*int(accuracy_boost - 1); 270 = default (get_FPT_IA in pt_cfastpt.c)",
+      py::arg("nodes").none(false).noconvert()
+    );
+
+  m.def("init_FPTIA_nested_nodes",
+      &cosmolike_interface::init_FPTIA_nested_nodes,
+      "Nested node rule of the TATT FAST-PT table: m > 0 gives FPTIA.N = "
+      "base*m nodes (nested refinement); 0 = default, base + 200*int(boost - 1)",
+      py::arg("m").none(false).noconvert()
+    );
+
   m.def("init_baryons_contamination",
       py::overload_cast<std::string, std::string>(
          &cosmolike_interface::init_baryons_contamination),

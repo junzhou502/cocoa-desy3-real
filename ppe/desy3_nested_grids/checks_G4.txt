@@ -1,0 +1,7 @@
+# checks of job G4 (check_bytes.py)
+# at b = 8 kmax_boltzmann = 50: the same CAMB request as step 5 at b = 8, so S5k b8 = S5 b8
+same {J}/S5kb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59512774/S5b8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S5kb8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59512774/S5b8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S5knfb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59512774/S5nfb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S5knfb8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59512774/S5nfb8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+differ {J}/S5kb1c0/HD.modelvector {NG}/ng_runs_59512774/S5b1c0/HD.modelvector

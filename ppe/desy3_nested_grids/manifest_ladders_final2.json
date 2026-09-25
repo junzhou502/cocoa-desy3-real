@@ -1,0 +1,533 @@
+{
+ "description": "task desy3-nested-grids-convergence-20260924, all ladders (jobs 59511807, 59511808, 59512774) + fixed-kmax attribution (job 59513400) + fixed-FAST-PT-node attribution (job 59513635)",
+ "ladders": {
+  "c0": {
+   "B": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb8c0"
+   },
+   "S1": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b8c0"
+   },
+   "S2": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b8c0"
+   },
+   "S3": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b8c0"
+   },
+   "S4": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b8c0"
+   },
+   "S5": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c0"
+   },
+   "S5nf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c0"
+   },
+   "S4nf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb8c0"
+   },
+   "S5u32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b8c0"
+   },
+   "S5k": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb8c0"
+   },
+   "S5knf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb8c0"
+   },
+   "F4": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b8c0"
+   },
+   "F4k": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb8c0"
+   },
+   "F4knf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb8c0"
+   }
+  },
+  "c5": {
+   "B": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb8c5"
+   },
+   "S1": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b8c5"
+   },
+   "S2": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b8c5"
+   },
+   "S3": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b8c5"
+   },
+   "S4": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b8c5"
+   },
+   "S5": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c5"
+   },
+   "S5nf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c5"
+   },
+   "S4nf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb8c5"
+   },
+   "S5u32": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5u32b8c5"
+   },
+   "S5k": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb8c5"
+   },
+   "S5knf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb8c5"
+   },
+   "F4": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4b8c5"
+   },
+   "F4k": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb8c5"
+   },
+   "F4knf": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb8c5"
+   }
+  }
+ },
+ "steps": [
+  {
+   "title": "no-FMA - OPT, S5, c0, b 1",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b1c0",
+   "runs": {
+    "S5nf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb1c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c0, b 2",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c0",
+   "runs": {
+    "S5nf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c0, b 4",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c0",
+   "runs": {
+    "S5nf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c0, b 8",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c0",
+   "runs": {
+    "S5nf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c0, b 1",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b1c0",
+   "runs": {
+    "S4nf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb1c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c0, b 2",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b2c0",
+   "runs": {
+    "S4nf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb2c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c0, b 4",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b4c0",
+   "runs": {
+    "S4nf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb4c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c0, b 8",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b8c0",
+   "runs": {
+    "S4nf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb8c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c5, b 1",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b1c5",
+   "runs": {
+    "S5nf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb1c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c5, b 2",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c5",
+   "runs": {
+    "S5nf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c5, b 4",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c5",
+   "runs": {
+    "S5nf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5, c5, b 8",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c5",
+   "runs": {
+    "S5nf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c5, b 1",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b1c5",
+   "runs": {
+    "S4nf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb1c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c5, b 2",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b2c5",
+   "runs": {
+    "S4nf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb2c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c5, b 4",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b4c5",
+   "runs": {
+    "S4nf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb4c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S4, c5, b 8",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b8c5",
+   "runs": {
+    "S4nf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S4nfb8c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c0, b 1",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb1c0",
+   "runs": {
+    "S5knf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb1c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c0, b 2",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb2c0",
+   "runs": {
+    "S5knf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb2c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c0, b 4",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb4c0",
+   "runs": {
+    "S5knf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb4c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c0, b 8",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb8c0",
+   "runs": {
+    "S5knf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb8c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c5, b 1",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb1c5",
+   "runs": {
+    "S5knf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb1c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c5, b 2",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb2c5",
+   "runs": {
+    "S5knf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb2c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c5, b 4",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb4c5",
+   "runs": {
+    "S5knf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb4c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, S5k (CAMB kmax 400), c5, b 8",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5kb8c5",
+   "runs": {
+    "S5knf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513400/S5knfb8c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c0, b 1",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb1c0",
+   "runs": {
+    "F4knf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb1c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c0, b 2",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb2c0",
+   "runs": {
+    "F4knf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb2c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c0, b 4",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb4c0",
+   "runs": {
+    "F4knf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb4c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c0, b 8",
+   "cosmo": "c0",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb8c0",
+   "runs": {
+    "F4knf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb8c0"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c5, b 1",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb1c5",
+   "runs": {
+    "F4knf_b1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb1c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c5, b 2",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb2c5",
+   "runs": {
+    "F4knf_b2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb2c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c5, b 4",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb4c5",
+   "runs": {
+    "F4knf_b4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb4c5"
+   }
+  },
+  {
+   "title": "no-FMA - OPT, F4k (FAST-PT 1100 fixed, CAMB kmax 400), c5, b 8",
+   "cosmo": "c5",
+   "base": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4kb8c5",
+   "runs": {
+    "F4knf_b8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59513635/F4knfb8c5"
+   }
+  }
+ ],
+ "cosines": [
+  {
+   "title": "(S5 b1->b2) vs (S5nf b1->b2), c0",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b1c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb1c0"
+   ]
+  },
+  {
+   "title": "(S5 b2->b4) vs (S5nf b2->b4), c0",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c0"
+   ]
+  },
+  {
+   "title": "(S5 b4->b8) vs (S5nf b4->b8), c0",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c0"
+   ]
+  },
+  {
+   "title": "(no-FMA - OPT at b8) vs (S5 b4->b8), c0",
+   "cosmo": "c0",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c0"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c0",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c0"
+   ]
+  },
+  {
+   "title": "(S5 b1->b2) vs (S5nf b1->b2), c5",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b1c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb1c5"
+   ]
+  },
+  {
+   "title": "(S5 b2->b4) vs (S5nf b2->b4), c5",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b2c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb2c5"
+   ]
+  },
+  {
+   "title": "(S5 b4->b8) vs (S5nf b4->b8), c5",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb4c5"
+   ]
+  },
+  {
+   "title": "(no-FMA - OPT at b8) vs (S5 b4->b8), c5",
+   "cosmo": "c5",
+   "x": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5nfb8c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c5"
+   ],
+   "y": [
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b8c5",
+    "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59512774/S5b4c5"
+   ]
+  }
+ ]
+}

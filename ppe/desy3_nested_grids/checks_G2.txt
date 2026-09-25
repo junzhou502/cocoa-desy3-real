@@ -1,0 +1,8 @@
+# checks of job G2 (check_bytes.py, run on the login node after the job; {J} = ng_runs_59511808)
+# nested k (and z) grids at accuracyboost 1 = the historical grids: S3/S4 at b 1 = S1 at b 1 (job G1)
+same {J}/S3b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511807/S1b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S3b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511807/S1b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S4b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511807/S1b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S4b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511807/S1b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+differ {J}/S3b2c0/HD.modelvector {NG}/ng_runs_59511807/S1b2c0/HD.modelvector
+differ {J}/S4b2c5/HD.modelvector {NG}/ng_runs_59511807/S2b2c5/HD.modelvector

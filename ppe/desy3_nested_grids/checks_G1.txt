@@ -1,0 +1,34 @@
+# checks of job G1 (check_bytes.py)
+# defaults = stored references (production .so 362aef90 / earlier)
+same {J}/REGbase/REF.modelvector {YC}/g_reg_baseline/g_reg_baseline.modelvector
+same {J}/REGcamb/REF.modelvector {YC}/g_reg_cambmatch/g_reg_cambmatch.modelvector
+same {J}/REGgk/REF.modelvector {YC}/g_gk_cosmosis/g_gk_cosmosis.modelvector
+same {J}/REGnoia/REF.modelvector {YC}/g_noia_gk/g_noia_gk.modelvector
+same {J}/D_FID/FID.modelvector {TXC}/tx_ccG1_59486353/F1/FID/FID.modelvector
+same {J}/D_HA/HA.modelvector {TXC}/tx_ccG1_59486353/F1/HA/HA.modelvector
+same {J}/D_N0/N0.modelvector {TXC}/tx_ccG1_59486353/F1/N0/N0.modelvector
+same {J}/X0c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG1_59486353/F1/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# baseline ladder = stored ladder vectors where they exist (b = 1, 2, 8)
+same {J}/Bb1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG1_59486353/F1/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Bb2c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L2c0/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Bb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L8c0/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Bb1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/F1c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Bb2c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L2c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/Bb8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {TXC}/tx_ccG2_59486354/L8c5/*/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# N0 and LN have no FAST-PT term: the base node count must not change them
+same {J}/S1b1c0/*.modelvector@N0,LN {J}/Bb1c0/*.modelvector@N0,LN
+same {J}/S1b2c0/*.modelvector@N0,LN {J}/Bb2c0/*.modelvector@N0,LN
+same {J}/S1b4c0/*.modelvector@N0,LN {J}/Bb4c0/*.modelvector@N0,LN
+same {J}/S1b8c0/*.modelvector@N0,LN {J}/Bb8c0/*.modelvector@N0,LN
+same {J}/S1b1c5/*.modelvector@N0,LN {J}/Bb1c5/*.modelvector@N0,LN
+same {J}/S1b2c5/*.modelvector@N0,LN {J}/Bb2c5/*.modelvector@N0,LN
+same {J}/S1b4c5/*.modelvector@N0,LN {J}/Bb4c5/*.modelvector@N0,LN
+same {J}/S1b8c5/*.modelvector@N0,LN {J}/Bb8c5/*.modelvector@N0,LN
+# nested z grids at accuracyboost 1 = the historical grids
+same {J}/S2b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {J}/S1b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S2b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {J}/S1b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# the options change the TATT vectors
+differ {J}/S1b1c0/HD.modelvector {J}/Bb1c0/HD.modelvector
+differ {J}/S2b2c0/HD.modelvector {J}/S1b2c0/HD.modelvector
+differ {J}/S1b1c5/HD.modelvector {J}/Bb1c5/HD.modelvector
+differ {J}/S2b2c5/HD.modelvector {J}/S1b2c5/HD.modelvector

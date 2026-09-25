@@ -1,0 +1,69 @@
+{
+ "description": "task desy3-nested-grids-convergence-20260924, baseline and steps 1-4 (jobs 59511807, 59511808)",
+ "ladders": {
+  "c0": {
+   "B": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb8c0"
+   },
+   "S1": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b8c0"
+   },
+   "S2": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b8c0"
+   },
+   "S3": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b8c0"
+   },
+   "S4": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b1c0",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b2c0",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b4c0",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b8c0"
+   }
+  },
+  "c5": {
+   "B": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/Bb8c5"
+   },
+   "S1": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S1b8c5"
+   },
+   "S2": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511807/S2b8c5"
+   },
+   "S3": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S3b8c5"
+   },
+   "S4": {
+    "1": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b1c5",
+    "2": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b2c5",
+    "4": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b4c5",
+    "8": "/project/chihway/junzhou/Project-Projection-Effect/cocoa/Cocoa/projects/des_y3/ppe/desy3_nested_grids/chains/ng_runs_59511808/S4b8c5"
+   }
+  }
+ }
+}

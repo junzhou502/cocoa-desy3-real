@@ -1,0 +1,41 @@
+# checks of job G3 (check_bytes.py)
+same {J}/REGbase/REF.modelvector {YC}/g_reg_baseline/g_reg_baseline.modelvector
+same {J}/REGcamb/REF.modelvector {YC}/g_reg_cambmatch/g_reg_cambmatch.modelvector
+same {J}/REGgk/REF.modelvector {YC}/g_gk_cosmosis/g_gk_cosmosis.modelvector
+same {J}/REGnoia/REF.modelvector {YC}/g_noia_gk/g_noia_gk.modelvector
+same {J}/D_FID/FID.modelvector {TXC}/tx_ccG1_59486353/F1/FID/FID.modelvector
+same {J}/D_HA/HA.modelvector {TXC}/tx_ccG1_59486353/F1/HA/HA.modelvector
+same {J}/D_N0/N0.modelvector {TXC}/tx_ccG1_59486353/F1/N0/N0.modelvector
+# step 4 with this build = step 4 of job G2 (build 59511648)
+same {J}/S4b2c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511808/S4b2c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S4b8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511808/S4b8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# nested nodes at accuracyboost 1: 1100 x 1 = 1100 + 0, so step 5 = step 4
+same {J}/S5b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511808/S4b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/S5b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511808/S4b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# N0 and LN have no FAST-PT term
+same {J}/S5b1c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b1c0/*.modelvector@N0,LN
+close {J}/S5nfb1c0/*.modelvector@N0,LN {J}/S5b1c0/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb1c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b1c0/*.modelvector@N0,LN 1e-9
+same {J}/S5b2c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b2c0/*.modelvector@N0,LN
+close {J}/S5nfb2c0/*.modelvector@N0,LN {J}/S5b2c0/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb2c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b2c0/*.modelvector@N0,LN 1e-9
+same {J}/S5b4c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b4c0/*.modelvector@N0,LN
+close {J}/S5nfb4c0/*.modelvector@N0,LN {J}/S5b4c0/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb4c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b4c0/*.modelvector@N0,LN 1e-9
+same {J}/S5b8c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b8c0/*.modelvector@N0,LN
+close {J}/S5nfb8c0/*.modelvector@N0,LN {J}/S5b8c0/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb8c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b8c0/*.modelvector@N0,LN 1e-9
+same {J}/S5b1c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b1c5/*.modelvector@N0,LN
+close {J}/S5nfb1c5/*.modelvector@N0,LN {J}/S5b1c5/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb1c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b1c5/*.modelvector@N0,LN 1e-9
+same {J}/S5b2c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b2c5/*.modelvector@N0,LN
+close {J}/S5nfb2c5/*.modelvector@N0,LN {J}/S5b2c5/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb2c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b2c5/*.modelvector@N0,LN 1e-9
+same {J}/S5b4c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b4c5/*.modelvector@N0,LN
+close {J}/S5nfb4c5/*.modelvector@N0,LN {J}/S5b4c5/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb4c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b4c5/*.modelvector@N0,LN 1e-9
+same {J}/S5b8c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b8c5/*.modelvector@N0,LN
+close {J}/S5nfb8c5/*.modelvector@N0,LN {J}/S5b8c5/*.modelvector@N0,LN 1e-9
+close {J}/S4nfb8c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b8c5/*.modelvector@N0,LN 1e-9
+differ {J}/S5b2c0/HD.modelvector {NG}/ng_runs_59511808/S4b2c0/HD.modelvector
+differ {J}/S5u32b2c5/HD.modelvector {J}/S5b2c5/HD.modelvector

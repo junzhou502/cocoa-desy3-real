@@ -1,0 +1,25 @@
+# checks of job G5 (check_bytes.py)
+# at b = 1 the fixed 1100 nodes are step 4's 1100 + 0: F4 b1 = S4 b1
+same {J}/F4b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511808/S4b1c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/F4b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {NG}/ng_runs_59511808/S4b1c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# at b = 8 kmax_boltzmann = 50 is the default: F4k b8 = F4 b8
+same {J}/F4kb8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {J}/F4b8c0/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+same {J}/F4kb8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm {J}/F4b8c5/*.modelvector@N0,FID,HA,HD,LN,LT,LTm
+# N0 and LN have no FAST-PT term
+same {J}/F4b1c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b1c0/*.modelvector@N0,LN
+same {J}/F4kb1c0/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb1c0/*.modelvector@N0,LN
+same {J}/F4b2c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b2c0/*.modelvector@N0,LN
+same {J}/F4kb2c0/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb2c0/*.modelvector@N0,LN
+same {J}/F4b4c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b4c0/*.modelvector@N0,LN
+same {J}/F4kb4c0/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb4c0/*.modelvector@N0,LN
+same {J}/F4b8c0/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b8c0/*.modelvector@N0,LN
+same {J}/F4kb8c0/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb8c0/*.modelvector@N0,LN
+same {J}/F4b1c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b1c5/*.modelvector@N0,LN
+same {J}/F4kb1c5/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb1c5/*.modelvector@N0,LN
+same {J}/F4b2c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b2c5/*.modelvector@N0,LN
+same {J}/F4kb2c5/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb2c5/*.modelvector@N0,LN
+same {J}/F4b4c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b4c5/*.modelvector@N0,LN
+same {J}/F4kb4c5/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb4c5/*.modelvector@N0,LN
+same {J}/F4b8c5/*.modelvector@N0,LN {NG}/ng_runs_59511808/S4b8c5/*.modelvector@N0,LN
+same {J}/F4kb8c5/*.modelvector@N0,LN {NG}/ng_runs_59513400/S5kb8c5/*.modelvector@N0,LN
+differ {J}/F4b2c0/HD.modelvector {NG}/ng_runs_59511808/S4b2c0/HD.modelvector

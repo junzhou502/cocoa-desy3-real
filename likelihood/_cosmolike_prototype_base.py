@@ -80,20 +80,65 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     self.theta_max_arcmin = ini.float("theta_max_arcmin")
 
     # ------------------------------------------------------------------------   
-    tmp=int(1000 + 250*self.accuracyboost)
-    self.z_interp_1D = np.concatenate((np.linspace(0.0,3.0,max(100,int(0.80*tmp))),
-                                       np.linspace(3.0,50.1,max(100,int(0.40*tmp))),
-                                       np.linspace(1070,1100,max(50,int(0.10*tmp)))),axis=0)
+    # Nested grids (options nested_z_grids, nested_k_grid; default False = the
+    # historical grids). CosmoLike interpolates its P(k,z), growth and distance
+    # tables LINEARLY between exactly the nodes handed to it here. Linear
+    # interpolation leaves a sawtooth error that vanishes at the nodes, so two
+    # grids that do not share nodes disagree by the full sawtooth amplitude.
+    # The historical node counts grow additively with accuracyboost (e.g.
+    # min(120 + 20*boost, 250) z nodes), so every boost moves the nodes and
+    # re-phases the sawtooth instead of shrinking it. With nesting, each
+    # uniform block keeps its boost-1 end points and its boost-1 interval count
+    # is multiplied by m = 2^ceil(log2(boost)) (capped at 16): every coarser
+    # grid is a subset of every finer one, the error falls like 1/m^2, and
+    # boost 1 reproduces the historical grids exactly. CAMB's transfer module
+    # accepts at most 256 redshifts, so with nested z grids the Pk_interpolator
+    # request stays at the boost-1 z grid (z_interp_2D_camb, 140 nodes) and the
+    # finer nodes re-evaluate cobaya's spline in z (as upstream des_y3 v4.11.2).
+    # Measured on DES Y3 MagLim (ppe/desy3_nested_grids, accuracyboost 1, 2, 4,
+    # 8): with nested z grids the IA-free and NLA-only vectors converge. Their
+    # step chi2 (462 cut points) falls 3-13x per doubling, to 3e-6 (Omega_m 0.3)
+    # and 6e-3 (Omega_m 0.8) at 4 -> 8, against 2.5e-4 and 0.24 before. The TATT
+    # vectors do not converge: their cFASTPT terms carry a numerical noise
+    # floor. Nested z and k grids cost 1.1 s instead of 0.3 s per IA-only
+    # evaluation at accuracyboost 8.
+    nest_z = bool(getattr(self, "nested_z_grids", False))
+    nest_k = bool(getattr(self, "nested_k_grid", False))
+    m = int(min(2**np.ceil(np.log2(max(1.0, self.accuracyboost))), 16))
+    if nest_z:
+      tmp1 = int(1000 + 250*1.0)   # the boost-1 counts of the formulas below
+      tmp2 = int(min(120 + 20*1.0, 250))
+      n1 = [max(100,int(0.80*tmp1)), max(100,int(0.40*tmp1)), max(50,int(0.10*tmp1))]
+      n2 = [max(50,int(0.75*tmp2)), max(30,int(0.25*tmp2))]
+      self.z_interp_1D = np.concatenate((np.linspace(0.0,3.0,(n1[0]-1)*m+1),
+                                         np.linspace(3.0,50.1,(n1[1]-1)*m+1),
+                                         np.linspace(1070,1100,(n1[2]-1)*m+1)),axis=0)
+      self.z_interp_2D = np.concatenate((np.linspace(0,3.0,(n2[0]-1)*m+1),
+                                         np.linspace(3.01,50.0,(n2[1]-1)*m+1)),axis=0)
+      self.z_interp_2D_camb = np.concatenate((np.linspace(0,3.0,n2[0]),
+                                              np.linspace(3.01,50.0,n2[1])),axis=0)
+    else:
+      tmp=int(1000 + 250*self.accuracyboost)
+      self.z_interp_1D = np.concatenate((np.linspace(0.0,3.0,max(100,int(0.80*tmp))),
+                                         np.linspace(3.0,50.1,max(100,int(0.40*tmp))),
+                                         np.linspace(1070,1100,max(50,int(0.10*tmp)))),axis=0)
+      tmp=int(min(120 + 20*self.accuracyboost,250))
+      self.z_interp_2D = np.concatenate((np.linspace(0,3.0,max(50,int(0.75*tmp))), 
+                                         np.linspace(3.01,50.0,max(30,int(0.25*tmp)))),axis=0)
+      self.z_interp_2D_camb = self.z_interp_2D
     self.len_z_interp_1D = len(self.z_interp_1D)
-
-    tmp=int(min(120 + 20*self.accuracyboost,250))
-    self.z_interp_2D = np.concatenate((np.linspace(0,3.0,max(50,int(0.75*tmp))), 
-                                       np.linspace(3.01,50.0,max(30,int(0.25*tmp)))),axis=0)
     self.len_z_interp_2D = len(self.z_interp_2D)
     # CAMB's transfer-grid minimum rises above 10**-4.99 in young-universe
     # prior corners, so keep the requested grid inside the validated range.
-    self.log10k_interp_2D = np.linspace(-4.90,2.0,int(1250+250*self.accuracyboost))
+    if nest_k:
+      self.log10k_interp_2D = np.linspace(-4.90,2.0,(int(1250+250*1.0)-1)*m+1)
+    else:
+      self.log10k_interp_2D = np.linspace(-4.90,2.0,int(1250+250*self.accuracyboost))
     self.len_log10k_interp_2D = len(self.log10k_interp_2D)
+    self.log.info('grids: nested_z_grids %s nested_k_grid %s (m = %d): z_1D %d, z_2D %d '
+                  '(CAMB request %d), log10k %d nodes', nest_z, nest_k, m,
+                  self.len_z_interp_1D, self.len_z_interp_2D, len(self.z_interp_2D_camb),
+                  self.len_log10k_interp_2D)
     # ------------------------------------------------------------------------
 
     ci.initial_setup()
@@ -200,6 +245,21 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     self.fptia_upsampling = 1 if _u is None else int(_u)
     ci.init_FPTIA_upsampling(factor=self.fptia_upsampling)
     self.log.info('fptia_upsampling = %d', self.fptia_upsampling)
+    # Base node count of that FAST-PT table: 270 + 200*int(accuracyboost - 1)
+    # nodes by default; fptia_base_nodes replaces the 270 (upstream CosmoLike
+    # core v4.11.7 uses 1100). Default 270 = bitwise the historical table.
+    _nb = getattr(self, "fptia_base_nodes", 270)
+    self.fptia_base_nodes = 270 if _nb is None else int(_nb)
+    ci.init_FPTIA_base_nodes(nodes=self.fptia_base_nodes)
+    self.log.info('fptia_base_nodes = %d', self.fptia_base_nodes)
+    # fptia_nested_nodes: True gives that table base*m nodes, m = 2^ceil(log2(
+    # accuracyboost)) as for the nested grids above (capped at 16), a nested
+    # refinement; False (default) keeps base + 200*int(accuracyboost - 1).
+    self.fptia_nested_nodes = bool(getattr(self, "fptia_nested_nodes", False))
+    if self.fptia_nested_nodes:
+      _m = int(min(2**np.ceil(np.log2(max(1.0, self.accuracyboost))), 16))
+      ci.init_FPTIA_nested_nodes(m=_m)
+      self.log.info('fptia_nested_nodes = True: %d x %d FAST-PT nodes', self.fptia_base_nodes, _m)
 
     if self.use_baryon_pca:
       baryon_pca_file = ini.relativeFileName('baryon_pca_file')
@@ -276,7 +336,7 @@ class _cosmolike_prototype_base(DataSetLikelihood):
           "H0": None,
           "omegam": None,
           "Pk_interpolator": {
-            "z": self.z_interp_2D,
+            "z": self.z_interp_2D_camb,
             "k_max": self.kmax_boltzmann * self.accuracyboost,
             "nonlinear": (True,False),
             "vars_pairs": ([("delta_tot", "delta_tot")])
