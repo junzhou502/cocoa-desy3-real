@@ -18,6 +18,10 @@ external_nz_modeling: 0
 # gamma_t POINT-MASS KERNEL: 0 = default CosmoLike/y3_production,
 #                            1 = CosmoSIS add_gammat_point_mass match
 point_mass_model: 0
+# TATT NORMALISATION C1*rho_crit (h^-2) multiplying every IA amplitude:
+#   0.01389 (default) = the historical CosmoLike literal (+0.122% high);
+#   0.013873073650776856 = the CosmoSIS value (tatt_interface.compute_c1_baseline)
+ia_c1rhocrit: 0.01389
 # WAVENUMBER (h/Mpc) of the growth factor used by the IA terms only:
 #   null (default) = no IA-specific growth; IA uses the shared 5e-4 1/Mpc growth
 #   <float>        = fixed k in h/Mpc (0.030350713668324276 = CosmoSIS TATT at h = 0.69)

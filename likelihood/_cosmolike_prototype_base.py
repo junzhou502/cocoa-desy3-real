@@ -154,6 +154,21 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     ci.init_point_mass_model(point_mass_model=self.point_mass_model)
     self.log.info('point_mass_model = %d', self.point_mass_model)
 
+    # TATT normalisation C1*rho_crit (h^-2). It multiplies EVERY TATT amplitude
+    # (IA_A1_Z1Z2 and IA_A2_Z1Z2 in cosmolike_core/cosmolike/IA.c), so the GI
+    # terms scale linearly and the II terms quadratically with it.
+    #   0.01389              historical CosmoLike literal (default; an unset
+    #                        option reproduces the historical vectors bitwise)
+    #   0.013873073650776856 CosmoSIS value, compute_c1_baseline() in
+    #                        intrinsic_alignments/tatt/tatt_interface.py, from
+    #                        C1 = 5e-14 h^-2 Msun^-1 Mpc^3, M_sun = 1.9891e30 kg,
+    #                        Mpc = 3.0857e22 m, G = 6.67384e-11, H = 100 h km/s/Mpc
+    # Ported from the legacy des_y3 commit 45fc3dc.
+    _c1 = getattr(self, "ia_c1rhocrit", 0.01389)
+    self.ia_c1rhocrit = 0.01389 if _c1 is None else float(_c1)
+    ci.init_ia_c1rhocrit(c1rhocrit_ia=self.ia_c1rhocrit)
+    self.log.info('ia_c1rhocrit = %.17g', self.ia_c1rhocrit)
+
     # Growth wavenumber of the intrinsic-alignment terms (see the block at the
     # top of this file). In h/Mpc, converted to 1/Mpc with the live h.
     #   null / unset / <= 0 : default. No IA-specific growth is set, so the IA

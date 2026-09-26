@@ -135,6 +135,16 @@ PYBIND11_MODULE(cosmolike_des_y3_interface, m)
       py::arg("ia_redshift_evolution").none(false).noconvert()
     );
 
+  m.def("init_ia_c1rhocrit",
+      &cosmolike_interface::init_ia_c1rhocrit,
+      "Set the TATT normalisation C1*rho_crit (h^-2) that multiplies every "
+      "IA amplitude in IA.c. Historical CosmoLike value 0.01389 (kept if "
+      "never called); the CosmoSIS value from "
+      "tatt_interface.compute_c1_baseline() is 0.013873073650776856. Must be "
+      "finite and strictly positive.",
+      py::arg("c1rhocrit_ia").none(false).noconvert()
+    );
+
   m.def("init_point_mass_model",
       &cosmolike_interface::init_point_mass_model,
       "Select the gamma_t point-mass kernel: 0 = default y3_production "
