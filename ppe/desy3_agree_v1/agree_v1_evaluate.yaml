@@ -1,0 +1,218 @@
+# des_y3 "agree-v1": the CoCoA configuration that agrees with CosmoSIS
+# (cosmosis/des_y3/desy3_agree_v1/ in the root repo) for DES Y3 MagLim 3x2pt, frozen by task
+# freeze-agree-v1-20260929 for the tag ppe-desy3-agree-v1. Evaluate template at the truth point (every
+# parameter fixed; point masses DES_PM1..6 = 0). Every accuracy and model option is explicit here; see
+# README.md for what each one is, why, and what it costs. Base: ppe/desy3_ellprefactor_growthk/
+# g_gk_cosmosis.yaml (cambmatch CAMB settings + ia_growth_k_hmpc "cosmosis"), unchanged below the
+# likelihood block. Run from cocoa/Cocoa (start_cocoa.sh sourced, Cascade Lake node):
+#   cobaya-run ./projects/des_y3/ppe/desy3_agree_v1/agree_v1_evaluate.yaml
+# The output folder below must not exist (or give cobaya-run -f / change output:).
+timing: true
+debug: false
+stop_at_error: true
+
+likelihood:
+  des_y3.combo_3x2pt:
+    path: ./projects/des_y3/data
+    data_file: maglim_3x2pt.dataset
+    # ---- accuracy (task tag-config-check-20260929 / freeze-agree-v1-20260929, README.md)
+    accuracyboost: 2.0
+    integration_accuracy: 4          # 40 + 40*4 Gauss-Legendre nodes in C_ss (II term converged)
+    kmax_boltzmann: 7.5              # CAMB k_max = max(7.5 x 2, theory extra_args kmax 50) = 50/Mpc
+    nested_z_grids: False
+    nested_k_grid: False
+    # ---- TATT FAST-PT table (cFASTPT)
+    fptia_kmin: 0.05                 # c/H0 units (upstream core v4.11.7 value)
+    fptia_base_nodes: 1100           # replaced by fptia_fixed_nodes below (kept equal for clarity)
+    fptia_fixed_nodes: 1100          # exactly 1100 nodes at every accuracyboost
+    fptia_nested_nodes: False
+    fptia_upsampling: 32             # cubic up-sampling of the table, free
+    # ---- model choices aligned with CosmoSIS (cosmosis/des_y3/desy3_agree_v1)
+    ia_growth_k_hmpc: "cosmosis"     # IA growth at the first CAMB k above 0.03 h/Mpc
+    ia_c1rhocrit: 0.01389            # CoCoA's TATT constant (default; CosmoSIS: 0.013873073650776856)
+    point_mass_model: 1              # CosmoSIS add_gammat_point_mass kernel, exact G/c^2
+    lmax: 50000
+    non_linear_emul: 2
+    IA_model: 1
+    IA_redshift_evolution: 3
+    use_baryon_pca: false
+    debug: false
+    create_baryon_pca: false
+    baryon_pca_select_sims: "antilles-2-99/antilles-101-378/antilles-380-400"
+    filename_baryon_pca: ./projects/des_y3/data/pca.txt
+    print_datavector: true
+    print_datavector_file: ./projects/des_y3/ppe/desy3_agree_v1/chains/agree_v1_evaluate/agree_v1_evaluate.modelvector
+
+params:
+  # --- cosmology: [cosmological_parameters] of des-y3-maglim-truth-values.ini
+  As_1e9:
+    value: 2.19
+    drop: true
+    renames: A
+  ns:
+    value: 0.97
+  H0:
+    value: 69.0
+  omegab:
+    value: 0.048
+    drop: true
+  omegam:
+    value: 0.3
+    drop: true
+  mnu:
+    value: 0.0773
+  w0pwa:
+    value: -1.0
+    drop: true
+  w:
+    value: -1.0
+  tau:
+    value: 0.0697186
+
+  # --- [wl_photoz_errors] bias_1..4
+  DES_DZ_S1:
+    value: 0.0
+  DES_DZ_S2:
+    value: 0.0
+  DES_DZ_S3:
+    value: 0.0
+  DES_DZ_S4:
+    value: 0.0
+  # --- [shear_calibration_parameters] m1..m4
+  DES_M1:
+    value: -0.0063
+  DES_M2:
+    value: -0.0198
+  DES_M3:
+    value: -0.0241
+  DES_M4:
+    value: -0.0369
+  # --- [intrinsic_alignment_parameters] TATT, global evolution (z_piv = 0.62;
+  #     CosmoLike hard-codes oneplusz0_ia = 1.62 for IA_redshift_evolution = 3)
+  DES_A1_1:
+    value: 0.7      # A1
+  DES_A1_2:
+    value: -1.7     # alpha1 (eta_ia)
+  DES_A2_1:
+    value: -1.36    # A2
+  DES_A2_2:
+    value: -2.5     # alpha2 (eta_ia_tt)
+  DES_BTA_1:
+    value: 1.0      # bias_ta
+
+  # --- [lens_photoz_errors] bias_1..6
+  DES_DZ_L1:
+    value: -0.009
+  DES_DZ_L2:
+    value: -0.035
+  DES_DZ_L3:
+    value: -0.005
+  DES_DZ_L4:
+    value: -0.007
+  DES_DZ_L5:
+    value: 0.0
+  DES_DZ_L6:
+    value: 0.0
+  # --- [lens_photoz_errors] width_1..6
+  DES_STRETCH_L1:
+    value: 0.975
+  DES_STRETCH_L2:
+    value: 1.306
+  DES_STRETCH_L3:
+    value: 0.87
+  DES_STRETCH_L4:
+    value: 0.918
+  DES_STRETCH_L5:
+    value: 1.0
+  DES_STRETCH_L6:
+    value: 1.0
+  # --- [bias_lens] b1..b6
+  DES_B1_1:
+    value: 1.5
+  DES_B1_2:
+    value: 1.8
+  DES_B1_3:
+    value: 1.8
+  DES_B1_4:
+    value: 1.9
+  DES_B1_5:
+    value: 2.3
+  DES_B1_6:
+    value: 2.3
+  # --- linear bias only (CosmoSIS uses lingal-lingal). All b2 = 0 also switches
+  #     off CosmoLike's one-loop bias terms via has_b2_galaxies().
+  DES_B2_1:
+    value: 0.0
+  DES_B2_2:
+    value: 0.0
+  DES_B2_3:
+    value: 0.0
+  DES_B2_4:
+    value: 0.0
+  DES_B2_5:
+    value: 0.0
+  DES_B2_6:
+    value: 0.0
+  # --- [mag_alpha_lens] alpha_1..6 -> CosmoLike C = 2*(alpha - 1)
+  DES_BMAG_1:
+    value: 0.42     # alpha = 1.21
+  DES_BMAG_2:
+    value: 0.30     # alpha = 1.15
+  DES_BMAG_3:
+    value: 1.76     # alpha = 1.88
+  DES_BMAG_4:
+    value: 1.94     # alpha = 1.97
+  DES_BMAG_5:
+    value: 1.56     # alpha = 1.78
+  DES_BMAG_6:
+    value: 2.96     # alpha = 2.48
+  # --- point masses. CosmoSIS add_point_mass runs with add_togammat = False,
+  #     so no point-mass term is present in the generated vector.
+  DES_PM1:
+    value: 0.0
+  DES_PM2:
+    value: 0.0
+  DES_PM3:
+    value: 0.0
+  DES_PM4:
+    value: 0.0
+  DES_PM5:
+    value: 0.0
+  DES_PM6:
+    value: 0.0
+
+  As:
+    value: "lambda As_1e9: 1e-9 * As_1e9"
+  wa:
+    value: "lambda w0pwa, w: w0pwa - w"
+  omegabh2:
+    value: "lambda omegab, H0: omegab*(H0/100)**2"
+  omegach2:
+    value: "lambda omegam, omegab, mnu, H0: (omegam-omegab)*(H0/100)**2-(mnu*(3.046/3)**0.75)/94.0708"
+  omegal:
+    latex: \Omega_\Lambda
+  omegamh2:
+    derived: "lambda omegam, H0: omegam*(H0/100)**2"
+  sigma8:
+    latex: \sigma_8
+  s8omegamp5:
+    derived: "lambda sigma8, omegam: sigma8*omegam**0.5"
+
+theory:
+  camb:
+    path: ./external_modules/code/CAMB
+    use_renames: true
+    extra_args:
+      halofit_version: takahashi
+      AccuracyBoost: 1.1
+      num_massive_neutrinos: 3
+      nnu: 3.046
+      dark_energy_model: fluid
+      accurate_massive_neutrino_transfers: false
+      kmax: 50
+
+sampler:
+  evaluate:
+    N: 1
+
+output: ./projects/des_y3/ppe/desy3_agree_v1/chains/agree_v1_evaluate/cobaya

@@ -41,6 +41,9 @@ nested_k_grid: False
 # NESTED FAST-PT NODES: False (default) = base + 200*int(accuracyboost - 1) nodes;
 # True = base x 2^ceil(log2(accuracyboost)) nodes (nested)
 fptia_nested_nodes: False
+# FIXED NODE COUNT of that table: null (default) = off; N = exactly N nodes at every
+# accuracyboost (replaces fptia_base_nodes, excludes fptia_nested_nodes)
+fptia_fixed_nodes: null
 # LOWER END IN k (c/H0 units) of that table: 1.0e-5 (default); upstream core v4.11.7 uses 0.05
 fptia_kmin: 1.0e-5
 use_emulator: False

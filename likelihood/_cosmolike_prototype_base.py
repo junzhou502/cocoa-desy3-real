@@ -275,6 +275,21 @@ class _cosmolike_prototype_base(DataSetLikelihood):
       _m = int(min(2**np.ceil(np.log2(max(1.0, self.accuracyboost))), 16))
       ci.init_FPTIA_nested_nodes(m=_m)
       self.log.info('fptia_nested_nodes = True: %d x %d FAST-PT nodes', self.fptia_base_nodes, _m)
+    # fptia_fixed_nodes: N (default None = off) holds that table at exactly N
+    # nodes at every accuracyboost (base N with the nested rule at m = 1, i.e.
+    # FPTIA.N = N x fptia_upsampling); it replaces fptia_base_nodes and excludes
+    # fptia_nested_nodes. This is what the accuracyboost ladders of
+    # ppe/desy3_nested_grids, cfastpt_kmin_test and the convergence campaign did
+    # with run_knobs.py --fpt-nodes-fixed N (the tagged agree-v1 settings use
+    # 1100 at accuracyboost 2, see ppe/desy3_agree_v1/README.md).
+    _nf = getattr(self, "fptia_fixed_nodes", None)
+    self.fptia_fixed_nodes = None if _nf is None else int(_nf)
+    if self.fptia_fixed_nodes is not None:
+      if self.fptia_nested_nodes:
+        raise LoggedError(self.log, "fptia_fixed_nodes and fptia_nested_nodes exclude each other")
+      ci.init_FPTIA_base_nodes(nodes=self.fptia_fixed_nodes)
+      ci.init_FPTIA_nested_nodes(m=1)
+      self.log.info('fptia_fixed_nodes = %d FAST-PT nodes at every accuracyboost', self.fptia_fixed_nodes)
     # Lower end in k of that table, in c/H0 units (1e-5 = default = 3.3e-9
     # h/Mpc; upstream CosmoLike core v4.11.7 uses 0.05 = 1.7e-5 h/Mpc). The
     # Limber lookups start above 0.66 c/H0 for the DES Y3 sources. Measured on
